@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript">
+    // var coffee = doucument.getElementById("coffee")
+    // var drink = doucument.getElementById("drink")
+
+    function cofSel() {
+      $("#coffee").show();
+      $("#drink").hide();
+    };
+
+    function drinSel() {
+      $("#coffee").hide();
+      $("#drink").show();
+    }
+  </script>
+  <style type="text/css">
+    /* main 시작 */
+    main {
+      width: 1200px;
+      position: relative;
+      left: 50%;
+      margin-left: -600px;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+    }
+
+    .banner {
+      width: 1800px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 10px -900px;
+      position: relative;
+
+    }
+
+    .burger_menu {
+      width: 1200px;
+      color: #282828;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      overflow: hidden;
+    }
+
+    .select_sub_menu {
+      width: 1200px;
+      margin: auto;
+      cursor: pointer;
+    }
+
+    .sub_menu {
+      float: left;
+      font-size: 24px;
+      font-weight: 700;
+
+    }
+
+    .mccafe_menu_tab {
+      margin: 20px 70px 20px 490px;
+    }
+
+    .drink_menu_tab {
+      margin: 20px 0 20px 0;
+    }
+
+    .box_burger {
+      transition: .5s;
+      width: 380px;
+      height: 380px;
+      margin: 5px 5px;
+      float: left;
+    }
+
+    .front {
+      width: 380px;
+      height: 380px;
+      background-color: RGBa(255, 188, 13, .1);
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    .box_burger:hover .front {
+      display: none;
+    }
+
+
+    .back {
+      background-color: #f8f8f8;
+      width: 380px;
+      height: 380px;
+      justify-content: center;
+      box-sizing: border-box;
+      border: 2px solid RGB(255, 188, 13);
+      border-radius: 15px;
+
+
+      font-weight: 800;
+      display: none;
+    }
+
+    .back img {
+      width: 250px;
+      margin: auto;
+      display: block;
+    }
+
+    .back .text {
+      display: block;
+      align-items: flex-end;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .box_burger:hover .back {
+      display: block;
+    }
+
+    .burger_menu .front img {
+      width: 380px;
+      margin: auto;
+    }
+
+    .burger_name {
+      font-size: 23px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+  </style>
+  <title>맥카페&음료 - 맥도날드</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="logo"> <a href=""> 맥도날드</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="">MENU</a>
+            <ul>
+              <li><a href="">버거</a> </li>
+              <li><a href="">맥런치</a> </li>
+              <li><a href="">맥모닝</a></li>
+              <li><a href="">해피스낵</a></li>
+              <li><a href="">사이드 & 디저트</a></li>
+              <li><a href="">맥카페 & 음료</a></li>
+              <li><a href="">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="">STORE</a>
+            <ul>
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">맥딜리버리</a></li>
+              <li><a href="">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="">WHAT'S NEW</a>
+            <ul>
+              <li><a href="">프로모션</a></li>
+              <li><a href="">새로운소식</a></li>
+              <li><a href="">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="">STORY</a>
+            <ul>
+              <li><a href="">브랜드 소개</a></li>
+              <li><a href="">사회적 책임과 지원</a></li>
+              <li><a href="">맥도날드 경쟁력</a></li>
+              <li><a href="">맥도날드 사람들</a></li>
+            </ul>
+
+          </li>
+        </ul>
+      </nav>
+      <ul class="side_menu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+    <div class="gnb_bg"></div>
+  </header>
+
+
+  <main id="main" class="main">
+    <div class="nothing"></div>
+
+    <img src="./images/맥카페배너.jpg" alt="맥카페&음료 페이지" class="banner">
+    <section>
+      <h3 class="hide">맥딜리버리 주문하러 가기</h3>
+      <a href="#" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
+    </section>
+    <div class="select_sub_menu">
+      <div class="mccafe_menu_tab sub_menu" onclick="cofSel()">맥카페</div>
+      <div class="drink_menu_tab sub_menu" onclick="drinSel()">음료</div>
+    </div>
+    <section class="burger_menu">
+      <h2 class="hide">맥카페&음료 종류</h2>
+
+
+      <div class="coffee" id="coffee">
+        <div class="box_burger box_burger1">
+          <div class="front">
+            <img src="./images/맥카페1자두칠러.png" alt="자두 칠러">
+            <h3 class="burger_name">자두 칠러</h3>
+            <div>Plum Chiller</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페1자두칠러.png" alt="자두 칠러">
+            <div class="burger_name">자두 칠러</div>
+            <div class="text">
+              자두의 진한 달콤함이<br>
+              얼음을 만나 더욱 시원한 여름 음료, 자두 칠러!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger2">
+          <div class="front">
+            <img src="./images/맥카페2제주한라봉칠러.png" alt="제주 한라봉 칠러">
+            <h3 class="burger_name">제주 한라봉 칠러</h3>
+            <div>Jeju Hallabong Chiller</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페2제주한라봉칠러.png" alt="제주 한라봉 칠러">
+            <div class="burger_name">제주 한라봉 칠러</div>
+            <div class="text">
+              제주 한라봉의 상큼함을 한 잔에!<br>
+              (제주 지역 한정 판매)<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger3">
+          <div class="front">
+            <img src="./images/맥카페3카페라떼.png" alt="카페라떼">
+            <h3 class="burger_name"> 카페라떼</h3>
+            <div>Café Latte</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페3카페라떼.png" alt="카페라떼">
+            <div class="burger_name"> 카페라떼</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피가 <br>
+              신선한 우유를 만나<br>
+              더 신선하고 부드럽게!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger4">
+          <div class="front">
+            <img src="./images/맥카페4디카페인카페라떼.png" alt="디카페인 카페라떼">
+            <h3 class="burger_name">디카페인 카페라떼</h3>
+            <div>Double Bulgogi Burger</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페4디카페인카페라떼.png" alt="디카페인 카페라떼">
+            <div class="burger_name">디카페인 카페라떼</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피가 <br>
+              신선한 우유를 만나 더 신선하고 부드럽게!<br>
+              *일부 매장 판매 제외<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger5">
+          <div class="front">
+            <img src="./images/맥카페5아이스카페라떼.png" alt="아이스 카페라떼">
+            <h3 class="burger_name">아이스 카페라떼</h3>
+            <div>Iced Café Latte</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페5아이스카페라떼.png" alt="아이스 카페라떼">
+            <div class="burger_name">아이스 카페라떼</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피가<br>
+              신선한 우유를 만나<br>
+              더 신선하고 부드럽게!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger6">
+          <div class="front">
+            <img src="./images/맥카페6디카페인아이스카페라떼.png" alt="디카페인 아이스 카페라떼">
+            <h3 class="burger_name">디카페인 아이스 카페라떼</h3>
+            <div>Double Cheeseburger</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페6디카페인아이스카페라떼.png" alt="디카페인 아이스 카페라떼">
+            <div class="burger_name">디카페인 아이스 카페라떼</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피가<br>
+              신선한 우유를 만나 더 신선하고 부드럽게!<br>
+              *일부 매장 판매 제외
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger7">
+          <div class="front">
+            <img src="./images/맥카페7아메리카노.png" alt="아메리카노">
+            <h3 class="burger_name">아메리카노</h3>
+            <div>Americano</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페7아메리카노.png" alt="아메리카노">
+            <div class="burger_name">아메리카노</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피로<br>
+              더 신선하게! 더 풍부하게!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger8">
+          <div class="front">
+            <img src="./images/맥카페8디카페인아메리카노.png" alt="디카페인 아메리카노">
+            <h3 class="burger_name">디카페인 아메리카노</h3>
+            <div>Decaffeine Americano</div>
+          </div>
+          <div class="back">
+            < <img src="./images/맥카페8디카페인아메리카노.png" alt="디카페인 아메리카노">
+              <div class="burger_name">디카페인 아메리카노</div>
+              <div class="text">
+                바로 내린 100% 친환경 커피로 <br>
+                더 신선하게! 더 풍부하게!<br>
+                *일부 매장 판매 제외
+              </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger9">
+          <div class="front">
+            <img src="./images/맥카페9아이스아메리카노.png" alt="아이스 아메리카노">
+            <h3 class="burger_name">아이스 아메리카노</h3>
+            <div>Iced Americano</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페9아이스아메리카노.png" alt="아이스 아메리카노">
+            <div class="burger_name">아이스 아메리카노</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피로<br>
+              더 신선하게! 더 풍부하게!
+
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger10">
+          <div class="front">
+            <img src="./images/맥카페10디카페인아이스아메.png" alt="디카페인 아이스 아메리카노">
+            <h3 class="burger_name">디카페인 아이스 아메리카노</h3>
+            <div>Decaffeine Iced Americano</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페10디카페인아이스아메.png" alt="디카페인 아이스 아메리카노">
+            <div class="burger_name">디카페인 아이스 아메리카노</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피로
+              더 신선하게! 더 풍부하게!<br>
+              *일부 매장 판매 제외
+
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger11">
+          <div class="front">
+            <img src="./images/맥카페11카푸치노.png" alt="카푸치노">
+            <div class="burger_name">카푸치노</div>
+            <div>Cappuccino</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페11카푸치노.png" alt="카푸치노">
+            <div class="burger_name">카푸치노</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피로 추출한 에스프레소<br>
+              위에 갓 만든 우유 거품으로 더 부드럽게!<br>
+            </div>
+          </div>
+        </div>
+
+        <div class="box_burger box_burger12">
+          <div class="front">
+            <img src="./images/맥카페12디카페인카푸치노.png" alt="디카페인 카푸치노">
+            <div class="burger_name">디카페인 카푸치노</div>
+            <div>Decaffeine Cappuccino</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페12디카페인카푸치노.png" alt="디카페인 카푸치노">
+            <div class="burger_name">디카페인 카푸치노</div>
+            <div class="text">
+              바로 내린 100% 친환경 커피로 추출한 에스프레소 위에<br>
+              갓 만든 우유 거품으로 더 부드럽게!<br>
+              *일부 매장 판매 제외<br>
+            </div>
+          </div>
+        </div>
+
+        <div class="box_burger box_burger13">
+          <div class="front">
+            <img src="./images/맥카페13에스프레소.png" alt="에스프레소">
+            <div class="burger_name">에스프레소</div>
+            <div>Espresso</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페13에스프레소.png" alt="에스프레소">
+            <div class="burger_name">에스프레소</div>
+            <div class="text">
+              바로 내린 100% 친환경 에스프레소
+            </div>
+          </div>
+        </div>
+
+        <div class="box_burger box_burger14">
+          <div class="front">
+            <img src="./images/맥카페14디카페인에스프레소.png" alt="디카페인 에스프레소">
+            <div class="burger_name">디카페인 에스프레소</div>
+            <div>Decaffeine Espresso</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페14디카페인에스프레소.png" alt="디카페인 에스프레소">
+            <div class="burger_name">디카페인 에스프레소</div>
+            <div class="text">
+              바로 내린 100% 친환경 에스프레소<br>
+              *일부 매장 판매 제외
+            </div>
+          </div>
+        </div>
+
+        <div class="box_burger box_burger15">
+          <div class="front">
+            <img src="./images/맥카페15드립커피.png" alt="드립 커피">
+            <div class="burger_name">드립 커피</div>
+            <div>Drip Coffee</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페15드립커피.png" alt="드립 커피">
+            <div class="burger_name">드립 커피</div>
+            <div class="text">
+              100% 아라비카 원두를 드립 커피의<br>
+              부드러움으로 만나보세요.<br>
+            </div>
+          </div>
+        </div>
+
+        <div class="box_burger box_burger16">
+          <div class="front">
+            <img src="./images/맥카페16아이스드립커피.png" alt="아이스 드립 커피">
+            <div class="burger_name">아이스 드립 커피</div>
+            <div>Iced Drip Coffee</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페16아이스드립커피.png" alt="아이스 드립 커피">
+            <div class="burger_name">아이스 드립 커피</div>
+            <div class="text">
+              100% 아라비카로 풍부한 아로마의 드립 커피를<br>
+              시원하게 만나보세요!<br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="drink" id="drink">
+        <div class="box_burger box_burger1">
+          <div class="front">
+            <img src="./images/drink1바닐라쉐이크.png" alt="바닐라 쉐이크 Medium">
+            <h3 class="burger_name">바닐라 쉐이크 Medium</h3>
+            <div>Vanilla Shake Medium</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink1바닐라쉐이크.png" alt="바닐라 쉐이크 Medium">
+            <div class="burger_name">바닐라 쉐이크 Medium</div>
+            <div class="text">
+              신선한 우유에 달콤한 바닐라 시럽으로 맛을 더한<br>
+              깔끔한 쉐이크!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger2">
+          <div class="front">
+            <img src="./images/drink2딸기쉐이크.png" alt="딸기 쉐이크 Medium">
+            <h3 class="burger_name">딸기 쉐이크 Medium</h3>
+            <div>Strawberry Shake Medium</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink2딸기쉐이크.png" alt="딸기 쉐이크 Medium">
+            <div class="burger_name">딸기 쉐이크 Medium</div>
+            <div class="text">
+              신선한 우유에 상큼한 딸기 시럽으로 맛을 더한<br>
+              부드러운 쉐이크!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger3">
+          <div class="front">
+            <img src="./images/drink3초코쉐이크.png" alt="초코 쉐이크 Medium">
+            <h3 class="burger_name">초코 쉐이크 Medium</h3>
+            <div>Café Latte</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink3초코쉐이크.png" alt="초코 쉐이크 Medium">
+            <div class="burger_name">초코 쉐이크 Medium</div>
+            <div class="text">
+              신선한 우유에 달콤함 초코렛 시럽이 들어간<br>
+              부드러운 쉐이크!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger4">
+          <div class="front">
+            <img src="./images/drink4오렌지 주스.png" alt="오렌지 주스">
+            <h3 class="burger_name">오렌지 주스</h3>
+            <div>Double Bulgogi Burger</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink4오렌지 주스.png" alt="오렌지 주스">
+            <div class="burger_name">오렌지 주스</div>
+            <div class="text">
+              비타민 C를 함유한 4년 연속 세계 판매 1위 <br>
+              100% 오렌지 주스.<br>
+
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger5">
+          <div class="front">
+            <img src="./images/drink5코카콜라.png" alt="코카콜라">
+            <h3 class="burger_name">코카-콜라</h3>
+            <div>Coca-Cola</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink5코카콜라.png" alt="코카콜라">
+            <div class="burger_name">코카-콜라</div>
+            <div class="text">
+              갈증해소 뿐만이 아니라 기분까지 상쾌하게! 코카-콜라<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger6">
+          <div class="front">
+            <img src="./images/drink6제로콜라.png" alt="코카콜라 제로">
+            <h3 class="burger_name">코카-콜라 제로</h3>
+            <div>Coca-Cola Zero</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink6제로콜라.png" alt="코카콜라 제로">
+            <div class="burger_name">코카-콜라 제로</div>
+            <div class="text">
+              상쾌한 맛은 살리면서 웰빙 트렌드에 맞춰<br>
+              설탕과 칼로리를 제로로 줄인 코카-콜라 제로<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger7">
+          <div class="front">
+            <img src="./images/drink7스프라.png" alt="스프라이트">
+            <h3 class="burger_name">스프라이트</h3>
+            <div>Sprite</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink7스프라.png" alt="스프라이트">
+            <div class="burger_name">스프라이트</div>
+            <div class="text">
+              청량함에 레몬, 라임향을 더한 시원함!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger8">
+          <div class="front">
+            <img src="./images/drink8환타.png" alt="환타">
+            <h3 class="burger_name">환타</h3>
+            <div>Fanta</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink8환타.png" alt="환타">
+            <div class="burger_name">환타</div>
+            <div class="text">
+              톡 쏘는 오렌지 향!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger9">
+          <div class="front">
+            <img src="./images/drink9생수.png" alt="생수">
+            <h3 class="burger_name">생수</h3>
+            <div>Mineral Water</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink9생수.png" alt="생수">
+            <div class="burger_name">생수</div>
+            <div class="text">
+              활력을 되찾아주는 깔끔한 미네랄 생수.<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger10">
+          <div class="front">
+            <img src="./images/drink10우유.png" alt="우유">
+            <h3 class="burger_name">우유</h3>
+            <div>Milk</div>
+          </div>
+          <div class="back">
+            <img src="./images/drink10우유.png" alt="우유">
+            <div class="burger_name">우유</div>
+            <div class="text">
+              매일유업의 신선한 우유!
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+
+</body>
+
+
+</html>

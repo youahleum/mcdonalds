@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>로그인 - 맥도날드</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+
+  <style type="text/css">
+    /* LOGIN */
+    .nothing {
+      width: 100%;
+      height: 140px;
+      padding-bottom: 250px;
+    }
+
+    .login {
+      /* background-color: #f7ede2; */
+      background-image: url(./images/login_bg.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      background-size: cover;
+      width: 100%;
+      height: 1300px;
+    }
+
+    .login h2 {
+      font-size: 34px;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 15px;
+    }
+
+
+
+    .login_box {
+      width: 500px;
+      /* padding: 15px 15px 20px 15px; */
+      border: 2px solid #282828;
+      border-radius: 10px;
+      margin: auto;
+      background: #fff;
+      box-sizing: border-box;
+      padding-bottom: 80px;
+    }
+
+    .login_box form {
+      padding: 30px 25px 10px;
+      border-bottom: 1px solid #999;
+    }
+
+    .login_box input {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 15px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #282828;
+      border-radius: 5px;
+    }
+
+    .login_box form [type="submit"] {
+      width: 270px;
+      margin: 20px 90px 20px 90px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #f7ede2;
+      background-color: #264a36;
+      cursor: pointer;
+    }
+
+    .login a {
+      display: block;
+      width: 200px;
+      height: 50px;
+      margin: 15px 24px 20px;
+      border: 1px solid #999;
+      border-radius: 5px;
+      background-color: #ffbc0d;
+      box-sizing: border-box;
+      float: left;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="logo"> <a href=""> 맥도날드</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="">MENU</a>
+            <ul>
+              <li><a href="">버거</a> </li>
+              <li><a href="">맥런치</a> </li>
+              <li><a href="">맥모닝</a></li>
+              <li><a href="">해피스낵</a></li>
+              <li><a href="">사이드 & 디저트</a></li>
+              <li><a href="">맥카페 & 음료</a></li>
+              <li><a href="">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="">STORE</a>
+            <ul>
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">맥딜리버리</a></li>
+              <li><a href="">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="">WHAT'S NEW</a>
+            <ul>
+              <li><a href="">프로모션</a></li>
+              <li><a href="">새로운소식</a></li>
+              <li><a href="">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="">STORY</a>
+            <ul>
+              <li><a href="">브랜드 소개</a></li>
+              <li><a href="">사회적 책임과 지원</a></li>
+              <li><a href="">맥도날드 경쟁력</a></li>
+              <li><a href="">맥도날드 사람들</a></li>
+            </ul>
+    </div>
+    </li>
+    </ul>
+    </nav>
+    <ul class="side_menu">
+      <li><a href="#">로그인</a></li>
+      <li><a href="#">회원가입</a></li>
+    </ul>
+    </div>
+    <div class="gnb_bg"></div>
+  </header>
+
+
+
+
+  <section class="login">
+    <div class="nothing"></div>
+
+    <div class="login_box">
+      <h2>LOGIN</h2>
+      <form action="">
+        <input type="text" placeholder="아이디를 입력해주세요">
+        <input type="password" placeholder="비밀번호를 입력해주세요">
+        <input type="submit" value="로그인">
+      </form>
+      <div>
+        <a href="">회원가입</a>
+        <a href="">아이디/비밀번호 찾기</a>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+</body>
+
+</html>

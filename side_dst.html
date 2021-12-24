@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>사이드 & 디저트 - 맥도날드</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+  <style type="text/css">
+    /* main 시작 */
+    main {
+      overflow: hidden;
+      min-width: 1200px;
+      /* width: 1200px; */
+      margin: auto;
+      position: relative;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+    }
+
+    .banner {
+      width: 1800px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 10px -900px;
+      position: relative;
+
+    }
+
+    .burger_menu {
+      width: 1200px;
+      margin: auto;
+      color: #282828;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      overflow: hidden;
+    }
+
+    .box_burger {
+      transition: .5s;
+      width: 380px;
+      height: 380px;
+      margin: 5px 5px;
+      float: left;
+    }
+
+    .front {
+      width: 380px;
+      height: 380px;
+      background-color: RGBa(255, 188, 13, .1);
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    .box_burger:hover .front {
+      display: none;
+    }
+
+
+    .back {
+      background-color: #f8f8f8;
+      width: 380px;
+      height: 380px;
+      justify-content: center;
+      box-sizing: border-box;
+      border: 2px solid RGB(255, 188, 13);
+      border-radius: 15px;
+
+
+      font-weight: 800;
+      display: none;
+    }
+
+    .back img {
+      width: 250px;
+      margin: auto;
+      display: block;
+    }
+
+    .back .text {
+      display: block;
+      align-items: flex-end;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .box_burger:hover .back {
+      display: block;
+    }
+
+    .burger_menu .front img {
+      width: 380px;
+      margin: auto;
+    }
+
+    .burger_name {
+      font-size: 23px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+
+    /* 맥딜리버리 */
+
+    .mcdel {
+      position: fixed;
+      top: 380px;
+      /* right: 110px; */
+      left: 50%;
+      margin-left: 632px;
+    }
+
+
+
+    .top {
+      width: 71px;
+      height: 76px;
+      position: relative;
+      left: 1250px;
+      top: -130px;
+    }
+
+    .footer {
+      width: 100%;
+      background: #282828;
+      color: #fff;
+      /* float: left; */
+      position: relative;
+      bottom: 0;
+    }
+
+    .footer_box {
+      width: 1200px;
+      height: 220px;
+      /* position: absolute; */
+      margin: auto;
+    }
+
+
+    .footer h2 {
+      width: 133px;
+      height: 103px;
+      background: url(./images/footer_logo.jpg);
+      text-indent: -9999px;
+      margin: 42px 80px 50px 50px;
+      float: left;
+    }
+
+    .footer_cont1 {
+
+      font-size: 14px;
+      margin: 45px 70px 0 0;
+      float: left;
+    }
+
+    .footer_cont2 {
+
+      font-size: 16px;
+      margin: 30px 50px 50px 0;
+      float: left;
+    }
+
+    .footer_box>a {
+      width: 100px;
+      height: 61px;
+      margin: 30px 0 0 350px;
+      float: left;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="logo"> <a href=""> 맥도날드</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="">MENU</a>
+            <ul>
+              <li><a href="">버거</a> </li>
+              <li><a href="">맥런치</a> </li>
+              <li><a href="">맥모닝</a></li>
+              <li><a href="">해피스낵</a></li>
+              <li><a href="">사이드 & 디저트</a></li>
+              <li><a href="">맥카페 & 음료</a></li>
+              <li><a href="">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="">STORE</a>
+            <ul>
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">맥딜리버리</a></li>
+              <li><a href="">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="">WHAT'S NEW</a>
+            <ul>
+              <li><a href="">프로모션</a></li>
+              <li><a href="">새로운소식</a></li>
+              <li><a href="">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="">STORY</a>
+            <ul>
+              <li><a href="">브랜드 소개</a></li>
+              <li><a href="">사회적 책임과 지원</a></li>
+              <li><a href="">맥도날드 경쟁력</a></li>
+              <li><a href="">맥도날드 사람들</a></li>
+            </ul>
+
+          </li>
+        </ul>
+      </nav>
+      <ul class="side_menu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+    <div class="gnb_bg"></div>
+  </header>
+
+
+  <main id="main" class="main">
+    <div class="nothing"></div>
+    <img src="./images/사이드&디저트배너.jpg" alt="사이드&디저트 페이지" class="banner">
+    <section>
+      <h3 class="hide">맥딜리버리 주문하러 가기</h3>
+      <a href="#" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
+    </section>
+
+    <section class="burger_menu">
+      <h2 class="hide">사이드 & 디저트 종류</h2>
+      <div class="box_burger box_burger1">
+        <div class="front">
+          <img src="./images/사이드1-케이준비프스낵랩.png" alt="케이준 비프 스낵랩">
+          <h3 class="burger_name">케이준 비프 스낵랩</h3>
+          <div>Cajun Beef Snack Wrap</div>
+        </div>
+        <div class="back">
+          <img src="./images/사이드1-케이준비프스낵랩.png" alt="케이준 비프 스낵랩">
+          <div class="burger_name">케이준 비프 스낵랩</div>
+          <div class="text">
+            100% 순 쇠고기 패티에 매콤한 케이준 소스, <br>
+            양상추, 또띠아까지 어우러져 든든한 맛!
+
+
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger2">
+        <div class="front">
+          <img src="./images/사이드2-상하이치킨스낵랩.png" alt="상하이 치킨 스낵랩">
+          <h3 class="burger_name">상하이 치킨 스낵랩</h3>
+          <div>Shanghai Chicken Snack Wrap</div>
+        </div>
+        <div class="back">
+          <img src="./images/사이드2-상하이치킨스낵랩.png" alt="상하이 치킨 스낵랩">
+          <div class="burger_name">상하이 치킨 스낵랩</div>
+          <div class="text">
+            매콤한 치킨에 <br>
+            달콤한 화이트 마요 소스로 매콤달콤하게!<br>
+            베이컨에 양상추, 또띠아까지 어우러져<br>
+            씹는 맛까지 즐겁다!
+
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger3">
+        <div class="front">
+          <img src="./images/사이드3-골든모짜렐라치즈스틱.png" alt="골든 모짜렐라 치즈스틱">
+          <h3 class="burger_name"> 골든 모짜렐라 치즈스틱</h3>
+          <div>Golden Mozzarella Cheese Sticks</div>
+        </div>
+        <div class="back">
+          <img src="./images/사이드3-골든모짜렐라치즈스틱.png" alt="골든 모짜렐라 치즈스틱">
+          <div class="burger_name"> 골든 모짜렐라 치즈스틱</div>
+          <div class="text">
+            속이 꽉 찬 황금빛 바삭함!<br>
+            자연 모짜렐라 치즈로 빈틈 없이 고소한<br>
+            맥도날드 치즈스틱을<br>
+            2조각과 4조각으로 다양하게 즐겨보세요!
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger4">
+        <div class="front">
+          <img src="./images/사이드4-후렌치후라이.png" alt="후렌치후라이">
+          <h3 class="burger_name">후렌치 후라이</h3>
+          <div>French Fries</div>
+        </div>
+        <div class="back">
+          <img src="./images/사이드4-후렌치후라이.png" alt="후렌치후라이">
+          <div class="burger_name">후렌치 후라이</div>
+          <div class="text">
+            통으로 썰어낸 감자를 맥도날드만의 <br>
+            노하우로 튀겨낸 남다른 맛과 바삭함!<br>
+            맥도날드의 역사가 담긴 <br>
+            월드 클래스 후렌치 후라이
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger5">
+        <div class="front">
+          <img src="./images/사이드5-맥너겟.png" alt="맥너겟®">
+          <h3 class="burger_name">맥너겟®</h3>
+          <div>McNuggets®</div>
+        </div>
+        <div class="back">
+          <img src="./images/사이드5-맥너겟.png" alt="맥너겟®">
+          <div class="burger_name">맥너겟®</div>
+          <div class="text">
+            바삭하고 촉촉한 치킨이 한 입에 쏙!<br>
+            다양한 소스로 입맛에 맞게 즐겨보세요!<br>
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger6">
+        <div class="front">
+          <img src="./images/사이드6-맥스파이시치킨텐더.png" alt="맥스파이시®치킨 텐더">
+          <h3 class="burger_name">맥스파이시®치킨 텐더</h3>
+          <div>McSpicy® Chicken Tenders</div>
+        </div>
+        <div class="back">
+          <img src="./images/사이드6-맥스파이시치킨텐더.png" alt="맥스파이시®치킨 텐더">
+          <div class="burger_name">맥스파이시®치킨 텐더</div>
+          <div class="text">
+            부드러운 100% 닭안심살을 스파이시 시즈닝으로<br>
+            매콤 바삭하게 튀겨낸 치킨 텐더!<br>
+            2가지 소스로 입맛에 맞게 즐겨보세요!
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger7">
+        <div class="front">
+          <img src="./images/사이드7-해쉬브라운.png" alt="해쉬 브라운">
+          <h3 class="burger_name">해쉬 브라운</h3>
+          <div>Hash Brown</div>
+        </div>
+        <div class="back">
+          <img src="./images/사이드7-해쉬브라운.png" alt="해쉬 브라운">
+          <div class="burger_name">해쉬 브라운</div>
+          <div class="text">씹으면 바삭바삭,<br>
+            속은 부드러운 감자의 고소함.<br><br>
+            *판매 시간: 4AM~10:30AM<br>
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger8">
+        <div class="front">
+          <img src="./images/사이드8-스트링치즈.png" alt="스트링 치즈">
+          <h3 class="burger_name">스트링 치즈</h3>
+          <div>String Cheese</div>
+        </div>
+        <div class="back">
+          <img src="./images/사이드8-스트링치즈.png" alt="스트링 치즈">
+          <div class="burger_name">스트링 치즈</div>
+          <div class="text">
+            색소와 합성보존료가 들어가지 않아 건강하고<br>
+            간편하게 먹기 좋은 스트링 타입의 치즈!<br>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+
+</body>
+
+
+</html>

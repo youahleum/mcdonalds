@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <!-- bxslider css 파일 -->
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>맥도날드</title>
+  <style>
+    /* main 시작 */
+    main {
+      overflow: hidden;
+      min-width: 1200px;
+      /* width: 1200px; */
+      margin: auto;
+      position: relative;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+    }
+
+    .banner {
+      width: 1980px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 20px -990px;
+      position: relative;
+
+    }
+
+    /* 메인 내용  */
+    .compet {
+      width: 1200px;
+      margin: auto;
+
+    }
+
+    .compet h3 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .compet p {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 70px;
+    }
+
+    .compet img {
+      margin: 0 30px 0 0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .compet_text1 {
+      font-size: 24px;
+    }
+
+    .compet_text2 {
+      font-size: 20px;
+    }
+
+    .compet_text3 {
+      font-size: 8px;
+      color: #db0007;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="logo"> <a href=""> 맥도날드</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="">MENU</a>
+            <ul>
+              <li><a href="">버거</a> </li>
+              <li><a href="">맥런치</a> </li>
+              <li><a href="">맥모닝</a></li>
+              <li><a href="">해피스낵</a></li>
+              <li><a href="">사이드 & 디저트</a></li>
+              <li><a href="">맥카페 & 음료</a></li>
+              <li><a href="">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="">STORE</a>
+            <ul>
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">맥딜리버리</a></li>
+              <li><a href="">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="">WHAT'S NEW</a>
+            <ul>
+              <li><a href="">프로모션</a></li>
+              <li><a href="">새로운소식</a></li>
+              <li><a href="">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="">STORY</a>
+            <ul>
+              <li><a href="">브랜드 소개</a></li>
+              <li><a href="">사회적 책임과 지원</a></li>
+              <li><a href="">맥도날드 경쟁력</a></li>
+              <li><a href="">맥도날드 사람들</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <ul class="side_menu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+    <div class="gnb_bg"></div>
+
+  </header>
+
+
+  <main id="main" class="main">
+    <div class="nothing"></div>
+    <img src="./images/경쟁력 배너.jpg" alt="맥도날드의 경쟁력" class="banner">
+    <section>
+      <h3 class="hide">맥딜리버리 주문하러 가기</h3>
+      <a href="#" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
+    </section>
+
+    <section class="compet compet1">
+      <div class="box1">
+        <h3>건강한 식재료가 만들어지는 원재료부터 알아볼까요?</h3>
+        <p>원재료 공급사에서는 좋은 재료를 준비하기 위해 엄격한 기준으로
+          원재료 수급 및 가공 과정을 관리하고 있습니다.</p>
+        <div class="container">
+          <img src="./images/경쟁력_소고기.jpg" alt="쇠고기">
+          <span>
+            <div class="compet_text1">
+              쇠고기 이력번호로 꼼꼼하게 관리되는
+              호주, 뉴질랜드산 쇠고기
+            </div>
+            <div class="compet_text2">
+              맥도날드 버거 패티는 방부제를 사용하지 않으며, 식약처 등 정부에서 인증한 안전한 재료를 사용합니다.
+
+              맥도날드 쇠고기 패티는 100% 호주 및 뉴질랜드의 순 쇠고기로 만듭니다.
+              ‘쇠고기 이력번호’를 통해 쇠고기가 어느 농장에서 생산이 되고,
+              어떠한 경로를 통하여 유통이 되는지를 철저하게 확인하고 있으며,
+              식품 안전 기준에 맞는 쇠고기만을 사용하기 위하여 만전을 가하고 있습니다.
+            </div>
+            <div class="compet_text3">
+              수입쇠고기유통이력관리시스템 사이트에서 이력번호를 조회하면 쇠고기의 세부 정보 (수출국 도축장, 가공장, 수출업체 및 도축, 수입일자 등)를 확인할 수 있습니다.
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div class="container">
+          <img src="./images/경쟁력_치킨.jpg" alt="치킨패티">
+          <span>
+            <div class="compet_text1">
+              신선하고 안전한 재료로
+              엄선하여 만든 치킨 패티
+            </div>
+            <div class="compet_text2">
+              맥도날드 버거 패티는 방부제를 사용하지 않으며,
+              식약처 등 정부에서 인증한 안전한 재료를 사용합니다.
+
+              맥스파이시 상하이 버거에는 국내산 통 닭가슴살을 사용합니다.
+            </div>
+
+          </span>
+        </div>
+        <hr>
+        <div class="container">
+          <img src="./images/경쟁력_계란.jpg" alt="계란">
+          <span>
+            <div class="compet_text1">
+              우수한 품질로 7년 연속 축산물품평가원의 상을 수상한
+              1+등급 계란
+            </div>
+            <div class="compet_text2">
+              축산물품질평가원에서 7년 연속 최우수상 및 우수상을 수상한 업체로부터 공급받은 1+등급 국내산 계란을 사용합니다.
+
+              표면 세척과 UV 살균 등 꼼꼼한 위생 처리를 거친 뒤, 레스토랑에서 조리될 때까지 7̊C 이하로 냉장 보관되어 최상의 신선함을 자랑합니다.
+            </div>
+            <div class="compet_text3">
+              2012, 2013, 2014, 2016년 최우수상, 2011. 2015, 2017년 우수상 수상
+              (자연 재해 등 불가피한 경우가 발생될 경우, 수급 업체가 변동 될 수 있습니다.)
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div class="container">
+          <img src="./images/경쟁력_양상추.jpg" alt="양상추">
+          <span>
+            <div class="compet_text1">
+              매일유업, 신세계 푸드, 한경 등 HACCP 인증 제조사*에서 공급하는 신선한 양상추
+            </div>
+            <div class="compet_text2">
+              농지의 물은 깨끗한지, 토양의 영양분은 풍부한지 농지 주위에
+              오염 요소는 없는지, 양상추가 자라는 농장부터 꼼꼼히 확인합니다.
+
+              수확된 양상추는 3번 이상 꼼꼼하게 세척하며,
+              신선함을 유지하기 위해 진공으로 포장하여,
+              가공한 지 2일 이내 배송센터로 배송됩니다.
+            </div>
+            <div class="compet_text3">
+              자연 재해 등 불가피한 경우가 발생될 경우, 수급 업체가 변동될 수 있습니다.
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div class="container">
+          <img src="./images/경쟁력_빵.png" alt="빵">
+          <span>
+            <div class="compet_text1">
+              매일 구워 배송 받는 햄버거 빵
+            </div>
+            <div class="compet_text2">
+              맥도날드에서 사용하는 햄버거 빵은 국제식품안전협회(GFSI*)의 식품안전시스템 규격 인증을 받은 공장에서, 60년 이상의 햄버거 빵 제조 기술을 바탕으로 생산된 우수한 품질의 제품입니다.
+
+              신선한 햄버거 빵을 고객들께 제공하게 위해, 하루 수요량에 맞춰 국내에서 직접 구운 햄버거 빵을 사용합니다. 레스토랑으로 배송을 받을 때는 외부 오염을 차단한 전용 탑차를 이용하여 신선도를
+              유지합니다.
+            </div>
+            <div class="compet_text3">
+              GFSI (Global Food Safety Initiative) : 소비자에게 안전한 식품의 공급을 보장하기 위해, 식품 안전 관리 시스템의 지속적인 개선을 목표로 설립된
+              국제식품안전협회입니다.
+              맥도날드에서 사용하는 햄버거 빵은 GFIS가 공인하는 식품안전경영시스템 (FSSC-22000)을 인증 받은 공장에서 생산되고 있습니다.
+            </div>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="compet compet2">
+      <div class="box2">
+        <h3>깐깐한 원재료 준비 및 가공 과정만큼 보관과 배송도 중요하겠죠?</h3>
+        <p>
+          배송 업체에서는 재료의 신선도와 안전성을 유지하기 위해
+          철저하게 품질을 검사하여 보관하고 배송합니다.
+        </p>
+        <div>
+          <img src="./images/경쟁력_배송1.jpg" alt="검수 및 하역 단계">
+          <span>
+            <div class="compet_text1">
+              최적의 온도와 보안 상태를 확인하는
+              검수 및 하역 단계
+            </div>
+            <div class="compet_text2">
+              깐깐한 관리를 통해 선별되고 가공된 원재료는 최적화된 온도에서 보관된 상태로 원재료 컨테이너에 봉인되어 물류 창고에 도착합니다. 물류업체에서 보안 확인을 마친 후, 트럭과 공장 사이의 공간이
+              한치의 틈도 없이 맞물리도록 도킹 작업을 수행, 최적의 온도를 유지하도록 한 후 재료를 하역합니다. 하역과정에서 재료의 온도를 확인하고 검수하는 과정을 거친 후에, 품질 검사증을 붙여 최적의
+              상태로 보관될 수 있도록 합니다.
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div>
+          <img src="./images/경쟁력_배송2.jpg" alt="보관 및 배송 단계">
+          <span>
+            <div class="compet_text1">
+              안전과 청결은 기본, 보관 및 배송 단계
+            </div>
+            <div class="compet_text2">
+              검수가 완료된 재료들은 레스토랑으로 이동되기 전까지 재료의 종류, 레스토랑 배송 날짜 등에 따라 분류하여 안전하고 깨끗하게 보관됩니다. 이 때, 재료들의 신선한 보관을 위해 최적의 온도
+              상태를
+              유지합니다. 재료의 유효기간과 상태를 다시 한 번 점검 후, 배송 차량이 보관 창고에 한 치의 틈도 없이 도킹되면, 재료들을 차량에 실어 목적지 레스토랑으로 출발하게 됩니다.
+            </div>
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="compet compet3">
+      <div class="box3">
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+
+</body>
+
+
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <title>맥모닝 - 맥도날드</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+
+  <style type="text/css">
+    /* main 시작 */
+    main {
+      overflow: hidden;
+      min-width: 1200px;
+      /* width: 1200px; */
+      margin: auto;
+      position: relative;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+    }
+
+    .banner {
+      width: 1800px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 10px -900px;
+      position: relative;
+
+    }
+
+    .burger_menu {
+      width: 1200px;
+      margin: auto;
+      color: #282828;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      overflow: hidden;
+    }
+
+    .box_burger {
+      transition: .5s;
+      width: 380px;
+      height: 380px;
+      margin: 5px 5px;
+      float: left;
+    }
+
+    .front {
+      width: 380px;
+      height: 380px;
+      background-color: RGBa(255, 188, 13, .1);
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    .box_burger:hover .front {
+      display: none;
+    }
+
+
+    .back {
+      background-color: #f8f8f8;
+      width: 380px;
+      height: 380px;
+      justify-content: center;
+      box-sizing: border-box;
+      border: 2px solid RGB(255, 188, 13);
+      border-radius: 15px;
+
+
+      font-weight: 800;
+      display: none;
+    }
+
+    .back img {
+      width: 250px;
+      margin: auto;
+      display: block;
+    }
+
+    .back .text {
+      display: block;
+      align-items: flex-end;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .box_burger:hover .back {
+      display: block;
+    }
+
+    .burger_menu .front img {
+      width: 380px;
+      margin: auto;
+    }
+
+    .burger_name {
+      font-size: 23px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+
+    /* 맥딜리버리 */
+
+    .mcdel {
+      position: fixed;
+      top: 380px;
+      /* right: 110px; */
+      left: 50%;
+      margin-left: 632px;
+    }
+
+
+
+    .top {
+      width: 71px;
+      height: 76px;
+      position: relative;
+      left: 1250px;
+      top: -130px;
+    }
+
+    .footer {
+      width: 100%;
+      background: #282828;
+      color: #fff;
+      /* float: left; */
+      position: relative;
+      bottom: 0;
+    }
+
+    .footer_box {
+      width: 1200px;
+      height: 220px;
+      /* position: absolute; */
+      margin: auto;
+    }
+
+
+    .footer h2 {
+      width: 133px;
+      height: 103px;
+      background: url(./images/footer_logo.jpg);
+      text-indent: -9999px;
+      margin: 42px 80px 50px 50px;
+      float: left;
+    }
+
+    .footer_cont1 {
+
+      font-size: 14px;
+      margin: 45px 70px 0 0;
+      float: left;
+    }
+
+    .footer_cont2 {
+
+      font-size: 16px;
+      margin: 30px 50px 50px 0;
+      float: left;
+    }
+
+    .footer_box>a {
+      width: 100px;
+      height: 61px;
+      margin: 30px 0 0 350px;
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="logo"> <a href=""> 맥도날드</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="">MENU</a>
+            <ul>
+              <li><a href="">버거</a> </li>
+              <li><a href="">맥런치</a> </li>
+              <li><a href="">맥모닝</a></li>
+              <li><a href="">해피스낵</a></li>
+              <li><a href="">사이드 & 디저트</a></li>
+              <li><a href="">맥카페 & 음료</a></li>
+              <li><a href="">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="">STORE</a>
+            <ul>
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">맥딜리버리</a></li>
+              <li><a href="">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="">WHAT'S NEW</a>
+            <ul>
+              <li><a href="">프로모션</a></li>
+              <li><a href="">새로운소식</a></li>
+              <li><a href="">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="">STORY</a>
+            <ul>
+              <li><a href="">브랜드 소개</a></li>
+              <li><a href="">사회적 책임과 지원</a></li>
+              <li><a href="">맥도날드 경쟁력</a></li>
+              <li><a href="">맥도날드 사람들</a></li>
+            </ul>
+    </div>
+    </li>
+    </ul>
+    </nav>
+    <ul class="side_menu">
+      <li><a href="#">로그인</a></li>
+      <li><a href="#">회원가입</a></li>
+    </ul>
+    </div>
+    <div class="gnb_bg"></div>
+  </header>
+
+
+  <main id="main" class="main">
+    <div class="nothing"></div>
+    <img src="./images/맥머핀배너.jpg" alt="맥머핀 페이지" class="banner">
+    <section>
+      <h3 class="hide">맥딜리버리 주문하러 가기</h3>
+      <a href="#" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
+    </section>
+
+    <section class="burger_menu">
+      <h2 class="hide">맥모닝 종류</h2>
+      <div class="box_burger box_burger1">
+        <div class="front">
+          <img src="./images/맥모닝1-디럭스브렉퍼스트.png" alt="디럭스 브렉퍼스트">
+          <h3 class="burger_name">디럭스 브렉퍼스트</h3>
+          <div>Deluxe Breakfast</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝1-디럭스브렉퍼스트.png" alt="디럭스 브렉퍼스트">
+          <div class="burger_name">디럭스 브렉퍼스트</div>
+          <div class="text">
+            정통 아메리칸 스타일의 브렉퍼스트와<br>달콤한 핫케익을 함께~<br>
+            프리미엄한 주말 브런치를 매일 즐겨보세요.<br><br>
+            *판매 시간: 4AM~10:30AM
+
+
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger2">
+        <div class="front">
+          <img src="./images/맥모닝2-베이컨에그맥머핀.png" alt="베이컨 에그 맥머핀">
+          <h3 class="burger_name">베이컨 에그 맥머핀</h3>
+          <div>Bacon Egg McMuffin</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝2-베이컨에그맥머핀.png" alt="베이컨 에그 맥머핀">
+          <div class="burger_name">베이컨 에그 맥머핀</div>
+          <div class="text">
+            부드러운 계란, 바삭바삭한 베이컨과 고소한 치즈가<br>
+            갓 구워진 따뜻한 맥머핀®<br><br>
+            *판매 시간: 4AM~10:30AM
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger3">
+        <div class="front">
+          <img src="./images/맥모닝3-베이컨토마토에그.png" alt="베이컨 토마토 에그 맥머핀">
+          <h3 class="burger_name"> 베이컨 토마토 에그 맥머핀</h3>
+          <div>BLT Egg Muffin</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝3-베이컨토마토에그.png" alt="베이컨 토마토 에그 맥머핀">
+          <div class="burger_name"> 베이컨 토마토 에그 맥머핀</div>
+          <div class="text">
+            갓 구워내 따뜻하고 신선한<br>
+            베이컨 토마토 에그 머핀<br><br>
+            *판매 시간: 4AM~10:30AM
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger4">
+        <div class="front">
+          <img src="./images/맥모닝4-상하이치킨스낵랩.png" alt="상하이 치킨 스낵랩">
+          <h3 class="burger_name">상하이 치킨 스낵랩</h3>
+          <div>Shanghai Chicken Snack Wrap</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝4-상하이치킨스낵랩.png" alt="상하이 치킨 스낵랩">
+          <div class="burger_name">상하이 치킨 스낵랩</div>
+          <div class="text">매콤한 치킨에<br>
+            달콤한 화이트 마요 소스로 매콤달콤하게!<br>
+            베이컨에 양상추, 또띠아까지 어우러져<br>
+            씹는 맛까지 즐겁다!<br><br>
+            *판매 시간: 4AM~10:30AM
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger5">
+        <div class="front">
+          <img src="./images/맥모닝5-소시지에그맥머핀.png" alt="소시지 에그 맥머핀">
+          <h3 class="burger_name">소시지 에그 맥머핀</h3>
+          <div>Sausage Egg McMuffin</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝5-소시지에그맥머핀.png" alt="소시지 에그 맥머핀">
+          <div class="burger_name">소시지 에그 맥머핀</div>
+          <div class="text">
+            잉글리쉬 머핀 위에 먹음직스럽게 올려진 치즈와 계란,<br>
+            그리고 촉촉한 소시지 패티의 맛있는 조화!<br><br>
+            *판매 시간: 4AM~10:30AM
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger6">
+        <div class="front">
+          <img src="./images/맥모닝6-에그맥머핀.png" alt="에그 맥머핀">
+          <h3 class="burger_name">에그 맥머핀</h3>
+          <div>Egg McMuffin</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝6-에그맥머핀.png" alt="에그 맥머핀">
+          <div class="burger_name">에그 맥머핀</div>
+          <div class="text">캐나디안 스타일 베이컨과 계란의 클래식한 만남,<br>
+            맥도날드의 아침을 탄생하게 한 바로 그 메뉴.<br><br>
+            *판매 시간: 4AM~10:30AM
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger7">
+        <div class="front">
+          <img src="./images/맥모닝7-치킨치즈머핀.png" alt="치킨 치즈 머핀">
+          <h3 class="burger_name">치킨 치즈 머핀</h3>
+          <div>Chicken 'n Cheese Muffin</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝7-치킨치즈머핀.png" alt="치킨 치즈 머핀">
+          <div class="burger_name">치킨 치즈 머핀</div>
+          <div class="text">바삭한 치킨 패티와 고소한 치즈로 아침에도 든든하게!<br><br>
+            *판매 시간: 4AM~10:30AM
+
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger8">
+        <div class="front">
+          <img src="./images/맥모닝8-핫케익3.png" alt="핫케익 3조각">
+          <h3 class="burger_name">핫케익 3조각</h3>
+          <div>Hotcakes 3pcs</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝8-핫케익3.png" alt="핫케익 3조각">
+          <div class="burger_name">핫케익 3조각</div>
+          <div class="text">
+            부드럽게 구워낸 핫케이크에 향긋한 버터와<br>
+            달콤한 시럽을 살며시 부어<br>
+            오늘 하루도 기분 좋게 시작하세요.<br><br>
+            *판매 시간: 4AM~10:30AM
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger9">
+        <div class="front">
+          <img src="./images/맥모닝9-핫케익2.png" alt="핫케익 2조각">
+          <h3 class="burger_name">핫케익 2조각</h3>
+          <div>Hotcakes 2pcs</div>
+        </div>
+        <div class="back">
+          <img src="./images/맥모닝9-핫케익2.png" alt="핫케익 2조각">
+          <div class="burger_name">핫케익 2조각</div>
+          <div class="text">
+            부드럽게 구워낸 핫케이크에<br>
+            향긋한 버터와 달콤한 시럽을 살며시 부어<br>
+            오늘 하루도 기분 좋게 시작하세요.<br><br>
+            *판매 시간: 4AM~10:30AM!
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+
+</body>
+
+
+</html>

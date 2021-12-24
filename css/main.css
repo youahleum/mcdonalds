@@ -1,0 +1,238 @@
+.hide {
+  position: absolute;
+  left: -9999px;
+  top: -9999px
+}
+
+a {
+  text-decoration: none;
+  color: #000
+    /* color:inherit */
+}
+
+
+body {
+  font-family: "나눔고딕", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 140px;
+  position: fixed;
+  z-index: 9;
+  background-color: #fff;
+  border-bottom: 2px solid #264a36;
+}
+
+.header_inner {
+  width: 1200px;
+  height: 140px;
+  margin: auto;
+  /* position: absolute;
+  left: 50%;
+  margin-left: -600px; */
+  position: relative;
+
+}
+
+.logo {
+  width: 170px;
+  height: 112px;
+  background: url(../images/logo1.png) no-repeat;
+  text-indent: -9999px;
+  margin: 28px 360px 0 10px;
+  float: left;
+}
+
+.main_menu {
+  width: 750px;
+  height: 140px;
+  /* float: left; */
+  position: absolute;
+  left: 380px;
+  top: 95px
+}
+
+.main_menu_01 {
+  float: left;
+}
+
+.main_menu_02 {
+  float: left;
+}
+
+.main_menu_03 {
+  float: left;
+}
+
+.main_menu_04 {
+  float: left;
+}
+
+
+.main_menu>ul>li {
+  position: relative
+}
+
+.main_menu>li>a {
+  padding: 10px 20px 5px 10px;
+  margin: 0 20px 0 0;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  border-radius: 6px 6px 0 0;
+}
+
+
+.main_menu>li:hover>a {
+  background-color: #ffbc0d;
+  margin-left: -10px;
+  /* border-radius: 6px 6px 0 0; */
+}
+
+.main_menu>li>ul {
+  /* width: 1800px; */
+  height: 300px;
+  background-color: #264a36;
+  /* position: fixed; */
+  margin-left: 20px;
+  left: 0;
+  right: 0;
+  /* top: 140px; */
+  display: none;
+}
+
+.main_menu>li:hover ul {
+  display: block;
+}
+
+.main_menu_01 {
+  width: 160px;
+}
+
+
+
+.main_menu_02 {
+  width: 160px;
+}
+
+.main_menu_03 {
+  width: 200px;
+}
+
+
+.main_menu_04 {
+  width: 180px;
+}
+
+.main_menu>li ul a {
+  color: lightgray;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.gnb_bg {
+  width: 100%;
+  height: 310px;
+  position: absolute;
+  left: 0;
+  top: 142px;
+  background: #264a36;
+  display: none;
+  z-index: -1
+}
+
+.side_menu {
+  position: absolute;
+  top: 10px;
+  right: 85px;
+  font-weight: bold;
+}
+
+.side_menu li {
+  float: left;
+}
+
+.side_menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+
+}
+
+.side_menu li:first-child:after {
+  content: "│";
+  padding: 0 20px 0;
+}
+
+/* 맥딜리버리 */
+
+.mcdel {
+  position: fixed;
+  top: 675px;
+  /* right: 110px; */
+  left: 50%;
+  margin-left: 632px;
+}
+
+
+/* 위로 */
+.top {
+  width: 71px;
+  height: 76px;
+  position: relative;
+  left: 50%;
+  margin-left: 650px;
+  top: -130px;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  background: #282828;
+  color: #fff;
+  /* float: left; */
+  position: relative;
+}
+
+.footer_box {
+  width: 1200px;
+  height: 220px;
+  /* position: absolute; */
+  margin: auto;
+}
+
+
+.footer h2 {
+  width: 133px;
+  height: 103px;
+  background: url(../images/footer_logo.jpg);
+  text-indent: -9999px;
+  margin: 42px 80px 50px 50px;
+  float: left;
+}
+
+.footer_cont1 {
+
+  font-size: 14px;
+  margin: 45px 70px 0 0;
+  float: left;
+}
+
+.footer_cont2 {
+
+  font-size: 16px;
+  margin: 30px 50px 50px 0;
+  float: left;
+}
+
+.footer_box>a {
+  width: 100px;
+  height: 61px;
+  margin: 30px 0 0 350px;
+  float: left;
+}

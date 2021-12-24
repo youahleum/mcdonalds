@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript">
+    // var coffee = doucument.getElementById("fourAM")
+    // var drink = doucument.getElementById("drink")
+
+    function fourSel() {
+      $("#fourAM").show();
+      $("#tenAM").hide();
+    };
+
+    function tenSel() {
+      $("#fourAM").hide();
+      $("#tenAM").show();
+    }
+  </script>
+  <style type="text/css">
+    /* main 시작 */
+    main {
+      width: 1200px;
+      position: relative;
+      left: 50%;
+      margin-left: -600px;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+    }
+
+    .banner {
+      width: 1800px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 10px -900px;
+      position: relative;
+
+    }
+
+    .burger_menu {
+      width: 1200px;
+      color: #282828;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      overflow: hidden;
+    }
+
+    .select_sub_menu {
+      width: 1200px;
+      margin: auto;
+      cursor: pointer;
+    }
+
+    .sub_menu {
+      float: left;
+      font-size: 24px;
+      font-weight: 700;
+
+    }
+
+    .mccafe_menu_tab {
+      margin: 20px 70px 20px 300px;
+    }
+
+    .drink_menu_tab {
+      margin: 20px 0 20px 0;
+    }
+
+    .box_burger {
+      transition: .5s;
+      width: 380px;
+      height: 380px;
+      margin: 5px 5px;
+      float: left;
+    }
+
+    .front {
+      width: 380px;
+      height: 380px;
+      background-color: RGBa(255, 188, 13, .1);
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    .box_burger:hover .front {
+      display: none;
+    }
+
+
+    .back {
+      background-color: #f8f8f8;
+      width: 380px;
+      height: 380px;
+      justify-content: center;
+      box-sizing: border-box;
+      border: 2px solid RGB(255, 188, 13);
+      border-radius: 15px;
+
+
+      font-weight: 800;
+      display: none;
+    }
+
+    .back img {
+      width: 250px;
+      margin: auto;
+      display: block;
+    }
+
+    .back .text {
+      display: block;
+      align-items: flex-end;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .box_burger:hover .back {
+      display: block;
+    }
+
+    .burger_menu .front img {
+      width: 380px;
+      margin: auto;
+    }
+
+    .burger_name {
+      font-size: 23px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+  </style>
+  <title>해피밀 - 맥도날드</title>
+
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="logo"> <a href=""> 맥도날드</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="">MENU</a>
+            <ul>
+              <li><a href="">버거</a> </li>
+              <li><a href="">맥런치</a> </li>
+              <li><a href="">맥모닝</a></li>
+              <li><a href="">해피스낵</a></li>
+              <li><a href="">사이드 & 디저트</a></li>
+              <li><a href="">맥카페 & 음료</a></li>
+              <li><a href="">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="">STORE</a>
+            <ul>
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">맥딜리버리</a></li>
+              <li><a href="">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="">WHAT'S NEW</a>
+            <ul>
+              <li><a href="">프로모션</a></li>
+              <li><a href="">새로운소식</a></li>
+              <li><a href="">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="">STORY</a>
+            <ul>
+              <li><a href="">브랜드 소개</a></li>
+              <li><a href="">사회적 책임과 지원</a></li>
+              <li><a href="">맥도날드 경쟁력</a></li>
+              <li><a href="">맥도날드 사람들</a></li>
+            </ul>
+
+          </li>
+        </ul>
+      </nav>
+      <ul class="side_menu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+    <div class="gnb_bg"></div>
+  </header>
+
+
+  <main id="main" class="main">
+    <div class="nothing"></div>
+
+    <img src="./images/해피밀배너.jpg" alt="해피밀 페이지" class="banner">
+    <section>
+      <h3 class="hide">맥딜리버리 주문하러 가기</h3>
+      <a href="#" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
+    </section>
+    <div class="select_sub_menu">
+      <div class="mccafe_menu_tab sub_menu" onclick="fourSel()">AM 04:00 ~ AM 10:30</div>
+      <div class="drink_menu_tab sub_menu" onclick="tenSel()">AM 10:30 ~ AM 04:00</div>
+    </div>
+    <section class="burger_menu">
+      <h2 class="hide">해피밀 종류</h2>
+
+
+      <div class="fourAM" id="fourAM">
+        <div class="box_burger box_burger1">
+          <div class="front">
+            <img src="./images/해피밀1에그맥머핀.png" alt="에그 맥머핀">
+            <h3 class="burger_name">에그 맥머핀</h3>
+            <div>Egg McMuffin</div>
+          </div>
+          <div class="back">
+            <img src="./images/해피밀1에그맥머핀.png" alt="에그 맥머핀">
+            <div class="burger_name">에그 맥머핀</div>
+            <div class="text">
+              캐나디안 스타일 베이컨과 계란의 클래식한 만남, <br>
+              맥도날드의 아침을 탄생하게 한 바로 그 메뉴. <br> <br>
+              *판매 시간: 4AM~10:30AM<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger2">
+          <div class="front">
+            <img src="./images/해피밀2베이컨에그맥머핀.png" alt="베이컨 에그 맥머핀">
+            <h3 class="burger_name">베이컨 에그 맥머핀</h3>
+            <div>Bacon Egg McMuffin</div>
+          </div>
+          <div class="back">
+            <img src="./images/해피밀2베이컨에그맥머핀.png" alt="베이컨 에그 맥머핀">
+            <div class="burger_name">베이컨 에그 맥머핀</div>
+            <div class="text">
+              부드러운 계란, 바삭바삭한 베이컨과 고소한 치즈가<br>
+              갓 구워진 따뜻한 맥머핀®<br>
+              *판매 시간: 4AM~10:30AM
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger3">
+          <div class="front">
+            <img src="./images/해피밀3소시지에그맥머핀.png" alt="소시지 에그 맥머핀">
+            <h3 class="burger_name">소시지 에그 맥머핀</h3>
+            <div>Sausage Egg McMuffin</div>
+          </div>
+          <div class="back">
+            <img src="./images/해피밀3소시지에그맥머핀.png" alt="소시지 에그 맥머핀">
+            <div class="burger_name">소시지 에그 맥머핀</div>
+            <div class="text">
+              잉글리쉬 머핀 위에 먹음직스럽게 올려진 치즈와 계란,<br>
+              그리고 촉촉한 소시지 패티의 맛있는 조화!<br>
+
+              *판매 시간: 4AM~10:30AM<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger4">
+          <div class="front">
+            <img src="./images/해피밀4핫케익2조각.png" alt="핫케익 2조각">
+            <h3 class="burger_name">핫케익 2조각</h3>
+            <div>Hotcakes 2pcs</div>
+          </div>
+          <div class="back">
+            <img src="./images/해피밀4핫케익2조각.png" alt="핫케익 2조각">
+            <div class="burger_name">핫케익 2조각</div>
+            <div class="text">
+              부드럽게 구워낸 핫케이크에
+              향긋한 버터와 달콤한 시럽을 살며시 부어<br>
+              오늘 하루도 기분 좋게 시작하세요.<br>
+
+              *판매 시간: 4AM~10:30AM<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger5">
+          <div class="front">
+            <img src="./images/해피밀5생수.png" alt="생수">
+            <h3 class="burger_name">생수</h3>
+            <div>Mineral Water</div>
+          </div>
+          <div class="back">
+            <img src="./images/해피밀5생수.png" alt="생수">
+            <div class="burger_name">생수</div>
+            <div class="text">
+              활력을 되찾아주는 깔끔한 미네랄 생수.<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger6">
+          <div class="front">
+            <img src="./images/해피밀6우유.png" alt="우유">
+            <h3 class="burger_name">우유</h3>
+            <div>Milk</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페6디카페인아이스카페라떼.png" alt="디카페인 아이스 카페라떼">
+            <div class="burger_name">우유</div>
+            <div class="text">
+              매일유업의 신선한 우유!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger7">
+          <div class="front">
+            <img src="./images/해피밀7오렌지주스.png" alt="오렌지 주스">
+            <h3 class="burger_name">오렌지 주스</h3>
+            <div>Orange Juice</div>
+          </div>
+          <div class="back">
+            <img src="./images/해피밀7오렌지주스.png" alt="오렌지 주스">
+            <div class="burger_name">오렌지 주스</div>
+            <div class="text">
+              비타민 C를 함유한 4년 연속 세계 판매 1위 100% 오렌지 주스.<br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tenAM" id="tenAM">
+        <div class="box_burger box_burger1">
+          <div class="front">
+            <img src="./images/burger13불고기버거.png" alt="불고기 버거">
+            <h3 class="burger_name">불고기 버거</h3>
+            <div>Bulgogi Burger</div>
+          </div>
+          <div class="back">
+            <img src="./images/burger13불고기버거.png" alt="불고기 버거">
+            <div class="burger_name">불고기 버거</div>
+            <div class="text">
+              한국인의 입맛에 딱 맞는 불고기 소스에 잘 재운 패티와
+              고소한 마요네즈, 신선한 양상추의 맛있는 조합.<br><br>
+              *판매 시간: 10:30AM~4AM<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger2">
+          <div class="front">
+            <img src="./images/burger20치즈버거.png" alt="치즈버거">
+            <h3 class="burger_name">치즈버거</h3>
+            <div>Strawberry Shake Medium</div>
+          </div>
+          <div class="back">
+            <img src="./images/burger20치즈버거.png" alt="치즈버거">
+            <div class="burger_name">치즈버거</div>
+            <div class="text">
+              고소하고 부드러운 치즈와 100% 순 쇠고기 패티,<br>
+              맥도날드만의 심플한 클래식 치즈버거.<br><br>
+
+              *판매 시간: 10:30AM~4AM<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger3">
+          <div class="front">
+            <img src="./images/burger21햄버거.png" alt="햄버거">
+            <h3 class="burger_name">햄버거</h3>
+            <div>Café Latte</div>
+          </div>
+          <div class="back">
+            <img src="./images/burger21햄버거.png" alt="햄버거">
+            <div class="burger_name">햄버거</div>
+            <div class="text">
+              100% 순 쇠고기 패티에 상큼한 피클과 양파,<br>
+              기본에 충실한 맥도날드 햄버거.<br><br>
+              *판매 시간: 10:30AM~4AM<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger4">
+          <div class="front">
+            <img src="./images/사이드5-맥너겟.png" alt="맥너겟® 4조각">
+            <h3 class="burger_name">맥너겟® 4조각</h3>
+            <div>McNuggets® 4pcs</div>
+          </div>
+          <div class="back">
+            <img src="./images/사이드5-맥너겟.png" alt="맥너겟® 4조각">
+            <div class="burger_name">맥너겟® 4조각</div>
+            <div class="text">
+              바삭하고 촉촉한 치킨이 한 입에 쏙!<br>
+              다양한 소스로 입맛에 맞게 즐겨보세요!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger5">
+          <div class="front">
+            <img src="./images/해피밀5생수.png" alt="생수">
+            <h3 class="burger_name">생수</h3>
+            <div>Mineral Water</div>
+          </div>
+          <div class="back">
+            <img src="./images/해피밀5생수.png" alt="생수">
+            <div class="burger_name">생수</div>
+            <div class="text">
+              활력을 되찾아주는 깔끔한 미네랄 생수.<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger6">
+          <div class="front">
+            <img src="./images/해피밀6우유.png" alt="우유">
+            <h3 class="burger_name">우유</h3>
+            <div>Milk</div>
+          </div>
+          <div class="back">
+            <img src="./images/맥카페6디카페인아이스카페라떼.png" alt="디카페인 아이스 카페라떼">
+            <div class="burger_name">우유</div>
+            <div class="text">
+              매일유업의 신선한 우유!<br>
+            </div>
+          </div>
+        </div>
+        <div class="box_burger box_burger7">
+          <div class="front">
+            <img src="./images/해피밀7오렌지주스.png" alt="오렌지 주스">
+            <h3 class="burger_name">오렌지 주스</h3>
+            <div>Orange Juice</div>
+          </div>
+          <div class="back">
+            <img src="./images/해피밀7오렌지주스.png" alt="오렌지 주스">
+            <div class="burger_name">오렌지 주스</div>
+            <div class="text">
+              비타민 C를 함유한 4년 연속 세계 판매 1위 100% 오렌지 주스.<br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+
+</body>
+
+
+</html>

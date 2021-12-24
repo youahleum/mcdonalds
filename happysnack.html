@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>해피스낵 - 맥도날드</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+
+  <style type="text/css">
+    /* main 시작 */
+    main {
+      width: 1200px;
+
+      position: relative;
+      left: 50%;
+      margin-left: -600px;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+    }
+
+    .banner {
+      width: 1800px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 10px -900px;
+      position: relative;
+
+    }
+
+    .burger_menu {
+      color: #282828;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      overflow: hidden;
+    }
+
+    .box_burger {
+      transition: .5s;
+      width: 380px;
+      height: 380px;
+      margin: 5px 5px;
+      float: left;
+    }
+
+    .front {
+      width: 380px;
+      height: 380px;
+      background-color: RGBa(255, 188, 13, .1);
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    .box_burger:hover .front {
+      display: none;
+    }
+
+
+    .back {
+      background-color: #f8f8f8;
+      width: 380px;
+      height: 380px;
+      justify-content: center;
+      box-sizing: border-box;
+      border: 2px solid RGB(255, 188, 13);
+      border-radius: 15px;
+
+
+      font-weight: 800;
+      display: none;
+    }
+
+    .back img {
+      width: 250px;
+      margin: auto;
+      display: block;
+    }
+
+    .back .text {
+      display: block;
+      align-items: flex-end;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .box_burger:hover .back {
+      display: block;
+    }
+
+    .burger_menu .front img {
+      width: 380px;
+      margin: auto;
+    }
+
+    .burger_name {
+      font-size: 23px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="logo"> <a href=""> 맥도날드</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="">MENU</a>
+            <ul>
+              <li><a href="">버거</a> </li>
+              <li><a href="">맥런치</a> </li>
+              <li><a href="">맥모닝</a></li>
+              <li><a href="">해피스낵</a></li>
+              <li><a href="">사이드 & 디저트</a></li>
+              <li><a href="">맥카페 & 음료</a></li>
+              <li><a href="">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="">STORE</a>
+            <ul>
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">맥딜리버리</a></li>
+              <li><a href="">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="">WHAT'S NEW</a>
+            <ul>
+              <li><a href="">프로모션</a></li>
+              <li><a href="">새로운소식</a></li>
+              <li><a href="">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="">STORY</a>
+            <ul>
+              <li><a href="">브랜드 소개</a></li>
+              <li><a href="">사회적 책임과 지원</a></li>
+              <li><a href="">맥도날드 경쟁력</a></li>
+              <li><a href="">맥도날드 사람들</a></li>
+            </ul>
+
+          </li>
+        </ul>
+      </nav>
+      <ul class="side_menu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+    <div class="gnb_bg"></div>
+  </header>
+
+
+  <main id="main" class="main">
+    <div class="nothing"></div>
+    <img src="./images/해피스낵배너.jpg" alt="해피스낵 페이지 배너" class="banner">
+    <section>
+      <h3 class="hide">맥딜리버리 주문하러 가기</h3>
+      <a href="#" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
+    </section>
+
+    <section class="burger_menu">
+      <h2 class="hide">사이드 & 디저트 종류</h2>
+      <div class="box_burger box_burger1">
+        <div class="front">
+          <img src="./images/사이드1-케이준비프스낵랩.png" alt="케이준 비프 스낵랩">
+          <h3 class="burger_name">츄러스</h3>
+          <div>Churros</div>
+        </div>
+        <div class="back">
+          <img src="./images/해피스낵1-츄러스.png" alt="츄러스">
+          <div class="burger_name">츄러스</div>
+          <div class="text">
+            갓 튀긴 바삭한 츄러스에 시나몬 슈가를 솔솔~<br><br>
+            * 해피 스낵 할인은 매장 방문에 한함<br>
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger2">
+        <div class="front">
+          <img src="./images/해피스낵2-카페라떼.png" alt="카페 라떼">
+          <h3 class="burger_name">카페 라떼</h3>
+          <div>Café Latte</div>
+        </div>
+        <div class="back">
+          <img src="./images/해피스낵2-카페라떼.png" alt="카페 라떼">
+          <div class="burger_name">카페 라떼</div>
+          <div class="text">
+            바로 내린 100% 친환경 커피가 신선한 우유를 만나<br>
+            더 신선하고 부드럽게!<br><br>
+            * 해피 스낵 할인은 매장 방문에 한함<br>
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger3">
+        <div class="front">
+          <img src="./images/해피스낵3-자두칠러.png" alt="자두 칠러">
+          <h3 class="burger_name">자두 칠러</h3>
+          <div>Plum Chiller</div>
+        </div>
+        <div class="back">
+          <img src="./images/해피스낵3-자두칠러.png" alt="자두 칠러">
+          <div class="burger_name">자두 칠러</div>
+          <div class="text">
+            자두 과즙의 진한 달콤함이<br>
+            얼음을 만나 더욱 시원한 여름 음료, 자두 칠러!<br><br>
+            * 해피 스낵 할인은 매장 방문에 한함<br>
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger4">
+        <div class="front">
+          <img src="./images/해피스낵4-케이준비프스낵랩.png" alt="케이준 비프 스낵랩">
+          <h3 class="burger_name">케이준 비프 스낵랩</h3>
+          <div>Cajun Beef Snack Wrap</div>
+        </div>
+        <div class="back">
+          <img src="./images/해피스낵4-케이준비프스낵랩.png" alt="케이준 비프 스낵랩">
+          <div class="burger_name">케이준 비프 스낵랩</div>
+          <div class="text">100% 순 쇠고기 패티에<br>
+            매콤한 케이준 소스, 양상추,<br>
+            또띠아까지 어우러져 든든한 맛!<br><br>
+            * 해피 스낵 할인은 매장 방문에 한함<br>
+            * 판매 시간: 10:30AM~4AM<br>
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger5">
+        <div class="front">
+          <img src="./images/해피스낵5-불고기 버거.png" alt="불고기 버거">
+          <h3 class="burger_name">불고기 버거</h3>
+          <div>Bulgogi Burger</div>
+        </div>
+        <div class="back">
+          <img src="./images/해피스낵5-불고기 버거.png" alt="불고기 버거">
+          <div class="burger_name">불고기 버거</div>
+          <div class="text">
+            한국인의 입맛에 딱 맞는 불고기 소스에 잘 재운 패티와<br>
+            고소한 마요네즈, 신선한 양상추의 맛있는 조합.<br><br>
+            * 해피 스낵 할인은 매장 방문에 한함<br>
+            * 판매 시간: 10:30AM~4AM<br>
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger6">
+        <div class="front">
+          <img src="./images/해피스낵6-필레오피쉬.png" alt="필레 오 피쉬">
+          <h3 class="burger_name">필레 오 피쉬</h3>
+          <div>Fillet-O-Fish</div>
+        </div>
+        <div class="back">
+          <img src="./images/해피스낵6-필레오피쉬.png" alt="필레 오 피쉬">
+          <div class="burger_name">필레 오 피쉬</div>
+          <div class="text">100% 알래스카 폴락 패티의 바삭함,<br>
+            맥도날드의 타르타르소스와<br>
+            부드러운 스팀번이 조화로운 필레 오 피쉬<br><br>
+            * 해피 스낵 할인은 매장 방문에 한함<br>
+            * 판매 시간: 10:30AM~4AM<br>
+          </div>
+        </div>
+      </div>
+      <div class="box_burger box_burger7">
+        <div class="front">
+          <img src="./images/해피스낵7-에그불고기버거.png" alt="에그 불고기 버거">
+          <h3 class="burger_name">에그 불고기 버거</h3>
+          <div>Egg Bulgogi Burger</div>
+        </div>
+        <div class="back">
+          <img src="./images/해피스낵7-에그불고기버거.png" alt="에그 불고기 버거">
+          <div class="burger_name">에그 불고기 버거</div>
+          <div class="text">불고기 버거에 국내산 1+등급 계란을 더해<br>
+            맛의 정점을 찍다!<br><br>
+            * 해피 스낵 할인은 매장 방문에 한함<br>
+            * 판매 시간: 10:30AM~4AM<br>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+</body>
+
+</html>
