@@ -42,7 +42,19 @@
     }
 
     .compet h2 {
-      font-size: 28px;
+      font-size: 26px;
+      font-weight: 600;
+      padding: 10px;
+      margin-bottom: 30px;
+      width: 500px;
+      border: 2px solid #264a36;
+      border-radius: 10px;
+      background-color: #ffbc0d;
+      text-align: center;
+    }
+
+    .compet h2:hover {
+      cursor: pointer;
     }
 
     .compet .mid_txt {
@@ -61,6 +73,23 @@
 
     .compet img {
       margin: 0 30px 0 0;
+    }
+
+    .mid_name {
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      background-color: #264a36;
+      text-align: center;
+      margin: 30px 0 0 0;
+    }
+
+    .box1,
+    .box2 {
+      display: none;
     }
 
     .container {
@@ -92,7 +121,13 @@
   <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
   <script type="text/javascript" src="./js/main.js"></script>
   <script type="text/javascript">
-
+    $(window).ready(function () {
+      $(".compet h2").click(function () {
+        $(".compet>div").not($(this).next()).slideUp()
+        $(this).next().slideDown()
+        // $(this).next().slideToggle()
+      })
+    });
   </script>
 </head>
 
@@ -162,8 +197,8 @@
     </section>
 
     <section class="compet compet1">
+      <h2>01. 원재료 준비와 가공</h2>
       <div class="box1">
-        <h2>01. 원재료 준비와 가공</h2>
         <p class="mid_txt">건강한 식재료가 만들어지는 원재료부터 알아볼까요?</p>
         <p class="p_txt">원재료 공급사에서는 좋은 재료를 준비하기 위해 엄격한 기준으로<br>
           원재료 수급 및 가공 과정을 관리하고 있습니다.</p>
@@ -272,6 +307,7 @@
     </section>
 
     <section class="compet compet2">
+      <h2>02. 재료 보관부터 배송까지</h2>
       <div class="box2">
         <p class="mid_txt">깐깐한 원재료 준비 및 가공 과정만큼 보관과 배송도 중요하겠죠?</p>
         <p class="p_txt">
@@ -323,12 +359,12 @@
 
 
     <section class="compet compet3">
-      <div class="box1">
-        <h2>03. 레스토랑에서의 노력</h2>
+      <h2>03. 레스토랑에서의 노력</h2>
+      <div class="box3">
         <p class="mid_txt">레스토랑에 도착한 식재료는 어떻게 관리될까요?</p>
         <p class="p_txt">레스토랑으로 배송된 식재료가 음식으로 조리되어 고객에게 전달되는 순간까지
           맥도날드의 노력은 멈추지 않습니다.</p>
-        <div>철저한 재료 관리</div>
+        <div class="mid_name">철저한 재료 관리</div>
         <div class="container">
           <img src="./images/경쟁력_매장1.jpg" alt="적정 온도 유지">
           <span>
@@ -364,7 +400,7 @@
           <img src="./images/경쟁력_매장3.jpg" alt="냉장/냉동고의 온도를 철저히 유지">
           <span>
             <div class="compet_text1">
-              먼저 들어온 제품을 먼저 사용하고
+              먼저 들어온 제품을 먼저 사용하고<br>
               냉장/냉동고의 온도를 철저히 유지
             </div>
             <div class="compet_text2">
@@ -377,7 +413,7 @@
           </span>
         </div>
         <hr>
-        <div>조리환경 관리</div>
+        <div class="mid_name">조리환경 관리</div>
         <div class="container">
           <img src="./images/경쟁력_매장4.jpg" alt="온도를 체크">
           <span>
@@ -417,8 +453,8 @@
 
           </span>
         </div>
-
-        <div>조리과정 관리</div>
+        <hr>
+        <div class="mid_name">조리과정 관리</div>
         <div class="container">
           <img src="./images/경쟁력_매장7.jpg" alt="오토 쿠킹 모드">
           <span>
@@ -476,66 +512,64 @@
             </div>
           </span>
         </div>
-      </div>
 
-      <div>고객만족을 위한 노력</div>
-      <div class="container">
-        <img src="./images/경쟁력_매장11.jpg" alt="메이드 포 유">
-        <span>
-          <div class="compet_text1">
-            주문이 들어옴과 동시에 음식을
-            만드는 ‘메이드 포 유’ 시스템
-          </div>
-          <div class="compet_text2">
-            맥도날드는 음식을 미리 만들어 놓지 않고, 고객 주문 접수와 동시에 음식을 만들어 갓 조리된 신선한 음식만을 제공하는
-            ‘메이드 포 유(Made for You)’ 시스템을 적용하고 있습니다.
-          </div>
 
-        </span>
-      </div>
-      <hr>
-      <div class="container">
-        <img src="./images/경쟁력_매장12.jpg" alt="고객의견을 반영">
-        <span>
-          <div class="compet_text1">
-            고객의견을 반영한 제품 구성 및 함량 변경
-          </div>
-          <div class="compet_text2">
-            위생을 위해 쉬레더로 변경한 양상추의 함량이 적게 느껴진다는
-            고객 의견을 반영하여 일부 메뉴의 슈레더 양상추 함량이 30g씩 늘어났습니다.
-          </div>
+        <div class="mid_name">고객만족을 위한 노력</div>
+        <div class="container">
+          <img src="./images/경쟁력_매장11.jpg" alt="메이드 포 유">
+          <span>
+            <div class="compet_text1">
+              주문이 들어옴과 동시에 음식을
+              만드는 ‘메이드 포 유’ 시스템
+            </div>
+            <div class="compet_text2">
+              맥도날드는 음식을 미리 만들어 놓지 않고, 고객 주문 접수와 동시에 음식을 만들어 갓 조리된 신선한 음식만을 제공하는
+              ‘메이드 포 유(Made for You)’ 시스템을 적용하고 있습니다.
+            </div>
 
-        </span>
-      </div>
-      <hr>
-      <div class="container">
-        <img src="./images/경쟁력_매장13.jpg" alt="청결">
-        <span>
-          <div class="compet_text1">
-            고객이 주문하는 공간도 언제나 깨끗하게 유지
-          </div>
-          <div class="compet_text2">
-            고객이 주문을 하는 카운터와 디지털 키오스트 공간도 언제나 기분 좋게 사용하실 수 있도록 깨끗이 유지합니다.
-          </div>
-        </span>
-      </div>
-      <hr>
-      <div class="container">
-        <img src="./images/경쟁력_매장14.jpg" alt="청결">
-        <span>
-          <div class="compet_text1">
-            고객이 레스토랑을 나가는 순간까지 깨끗하게
-          </div>
-          <div class="compet_text2">
-            고객이 음식을 드시는 테이블은 물론, 휴지통과 화장실까지 청결하게 유지될 수 있도록 노력합니다.
-          </div>
-        </span>
+          </span>
+        </div>
+        <hr>
+        <div class="container">
+          <img src="./images/경쟁력_매장12.jpg" alt="고객의견을 반영">
+          <span>
+            <div class="compet_text1">
+              고객의견을 반영한 제품 구성 및 함량 변경
+            </div>
+            <div class="compet_text2">
+              위생을 위해 쉬레더로 변경한 양상추의 함량이 적게 느껴진다는
+              고객 의견을 반영하여 일부 메뉴의 슈레더 양상추 함량이 30g씩 늘어났습니다.
+            </div>
+
+          </span>
+        </div>
+        <hr>
+        <div class="container">
+          <img src="./images/경쟁력_매장13.jpg" alt="청결">
+          <span>
+            <div class="compet_text1">
+              고객이 주문하는 공간도 언제나 깨끗하게 유지
+            </div>
+            <div class="compet_text2">
+              고객이 주문을 하는 카운터와 디지털 키오스트 공간도 언제나 기분 좋게 사용하실 수 있도록 깨끗이 유지합니다.
+            </div>
+          </span>
+        </div>
+        <hr>
+        <div class="container">
+          <img src="./images/경쟁력_매장14.jpg" alt="청결">
+          <span>
+            <div class="compet_text1">
+              고객이 레스토랑을 나가는 순간까지 깨끗하게
+            </div>
+            <div class="compet_text2">
+              고객이 음식을 드시는 테이블은 물론, 휴지통과 화장실까지 청결하게 유지될 수 있도록 노력합니다.
+            </div>
+          </span>
+        </div>
       </div>
     </section>
-    <div class="box3">
 
-    </div>
-    </section>
 
 
 
