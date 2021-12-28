@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <!-- bxslider css 파일 -->
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>맥도날드</title>
+  <style>
+    /* main 시작 */
+    main {
+      overflow: hidden;
+      min-width: 1200px;
+      /* width: 1200px; */
+      margin: auto;
+      position: relative;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+    }
+
+    .banner {
+      width: 1980px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 20px -990px;
+      position: relative;
+
+    }
+
+
+
+    /* 메인 내용  */
+    section.utube {
+      width: 1200px;
+      margin: auto;
+    }
+
+    .utube h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 30px 0 30px -80px;
+    }
+
+    .utube p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #444;
+      margin: 0 0 20px -80px;
+    }
+
+
+    #player {
+      width: 1280px;
+      height: 720px;
+      margin: 30px 0 130px 0;
+      position: relative;
+      margin-left: -80px;
+    }
+
+    /* iframe {
+      width: 1280px;
+      margin: 130px 0 100px 0;
+      position: relative;
+      margin-left: -80px;
+    } */
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" defer>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+
+    function onYouTubeIframeAPIReady() {
+      // <div id="player"></div>
+      new YT.Player('player', {
+        videoId: 'ny8cb5j92t8', //재생할 유투브 영상 ID
+        playerVars: {
+          autoplay: true, // 자동재생 여부
+          loop: true, //반복 재생 여부
+          playlist: 'ny8cb5j92t8' // 반복 재생할 유투브 영상 ID 목록 
+        }
+        // events: {
+        //   onReady: function (event) {
+        //     event.target.mute() //음소거
+        //   }
+        // }
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <h1 class="logo"> <a href=""> 맥도날드</a></h1>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="">MENU</a>
+            <ul>
+              <li><a href="">버거</a> </li>
+              <li><a href="">맥런치</a> </li>
+              <li><a href="">맥모닝</a></li>
+              <li><a href="">해피스낵</a></li>
+              <li><a href="">사이드 & 디저트</a></li>
+              <li><a href="">맥카페 & 음료</a></li>
+              <li><a href="">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="">STORE</a>
+            <ul>
+              <li><a href="">매장찾기</a></li>
+              <li><a href="">맥딜리버리</a></li>
+              <li><a href="">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="">WHAT'S NEW</a>
+            <ul>
+              <li><a href="">프로모션</a></li>
+              <li><a href="">새로운소식</a></li>
+              <li><a href="">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="">STORY</a>
+            <ul>
+              <li><a href="">브랜드 소개</a></li>
+              <li><a href="">사회적 책임과 지원</a></li>
+              <li><a href="">맥도날드 경쟁력</a></li>
+              <li><a href="">맥도날드 사람들</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <ul class="side_menu">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+    <div class="gnb_bg"></div>
+
+  </header>
+
+
+  <main id="main" class="main">
+    <div class="nothing"></div>
+    <img src="./images/사람들배너.jpg" alt="맥도날드 사람들" class="banner">
+    <section>
+      <h3 class="hide">맥딜리버리 주문하러 가기</h3>
+      <a href="#" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
+    </section>
+
+    <section class="utube">
+      <h2>변화를 만나는 곳, 변화를 만드는 곳.</h2>
+      <p>맥도날드 크루들의 이야기를 영상으로 만나보세요.</p>
+
+      <!-- <div class="utube_box"> -->
+      <div id="player"></div>
+      <!-- </div>
+      <div class="utube_cover"></div>
+     -->
+      <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/ny8cb5j92t8" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> -->
+    </section>
+    <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+
+</body>
+
+
+</html>
