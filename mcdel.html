@@ -13,6 +13,7 @@
     href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
     rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
   <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
   <script type="text/javascript" src="./js/main.js"></script>
@@ -211,7 +212,8 @@
       let del_img = document.getElementById("search_del_img")
 
       if (address.value == "") {
-        alert("주소를 입력해주세요")
+        // alert("주소를 입력해주세요")
+        Swal.fire('주소를 입력해주세요')
       } else {
         del_img.src = "./images/맥딜_가능.jpg"
       }
@@ -290,7 +292,7 @@
 
       <div class="search_box">
         <!-- <input type="text" id="postcode" class="postcode" placeholder="우편번호"> -->
-        <input type="text" id="address" class="address" placeholder="주소를 선택해주세요">
+        <input type="text" id="address" class="address" placeholder="주소를 선택해주세요" readonly>
         <input type="button" onclick="execDaumPostcode()" class="btn" value="주소찾기 찾기"><br>
 
         <input type="text" id="detailAddress" class="detailAddress" placeholder="상세주소를 입력하세요"><br>
