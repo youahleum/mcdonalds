@@ -11,86 +11,108 @@
   <link rel="stylesheet" href="css/main.css">
   <title>맥도날드</title>
   <style>
+    /* main 시작 */
+    main {
+      overflow: hidden;
+      min-width: 1200px;
+      /* width: 1200px; */
+      margin: auto;
+      position: relative;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+    }
+
+    .banner {
+      width: 1980px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 20px -990px;
+      position: relative;
+
+    }
+
+
+
     /* 메인 내용  */
-    section.utube {
+    section h3 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .social {
       width: 1200px;
       margin: auto;
     }
 
-    .utube h2 {
-      font-size: 26px;
+    .social_1 img {
+      margin: 30px 0 30px 0;
+    }
+
+    .social_text1 {
+      font-size: 20px;
       font-weight: 700;
-      margin: 30px 0 30px -80px;
+      margin-bottom: 50px;
     }
 
-    .utube p {
-      font-size: 20px;
+    .social_text2 {
+      color: #555;
+      font-size: 17px;
       font-weight: 600;
-      color: #444;
-      margin: 0 0 20px -80px;
+      margin-bottom: 70px;
     }
 
-
-    #player {
-      width: 1280px;
-      height: 720px;
-      margin: 30px 0 130px 0;
-      position: relative;
-      margin-left: -80px;
+    .social_2 h3 {
+      text-align: center;
+      margin: 80px 0 70px 0;
     }
 
-    /* 소스코드 복사로 진행시 */
-    /* iframe {
-      width: 1280px;
-      margin: 130px 0 100px 0;
-      position: relative;
-      margin-left: -80px;
-    } */
-    .map_click {
-      width: 255px;
+    .social_part {
+      font-size: 22px;
+      font-weight: 800;
+      margin-right: 40px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .social_part1 {
+      margin-left: 50px;
+    }
+
+    .select_social_part {
+      color: #db0007;
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    .big_img {
+      width: 1168px;
       margin: auto;
+      margin-bottom: 40px;
+      margin-top: 100px;
 
-    }
-
-    .map_click a {
-      margin-left: -40px;
-      font-size: 20px;
-      color: #fff;
-      font-weight: 600;
-      background-color: #db0007;
-      padding: 20px 40px 20px 40px;
-      border-radius: 20px;
     }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
   <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
   <script type="text/javascript" src="./js/main.js"></script>
-  <script type="text/javascript" defer>
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
+  <script type="text/javascript">
+    function change_social(img_src, span_th) {
+      let big_img = document.getElementById("big_img");
+      let property =
 
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        big_img.src = img_src;
 
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
+      if (count == 1) {
+        span_th.className = "select_social_part";
+        count = 0
+      } else {
 
-    function onYouTubeIframeAPIReady() {
-      // <div id="player"></div>
-      new YT.Player('player', {
-        videoId: 'BiMkqfVNmnk', //재생할 유투브 영상 ID
-        playerVars: {
-          autoplay: true, // 자동재생 여부
-          loop: true, //반복 재생 여부
-          playlist: 'BiMkqfVNmnk' // 반복 재생할 유투브 영상 ID 목록 
-        }
-        // events: {
-        //   onReady: function (event) {
-        //     event.target.mute() //음소거
-        //   }
-        // }
-      });
+      }
+
+
     }
   </script>
 </head>
@@ -154,27 +176,41 @@
 
   <main id="main" class="main">
     <div class="nothing"></div>
-    <img src="./images/맥드라이브배너.jpg" alt="맥드라이브" class="banner">
+    <img src="./images/사회적책임배너.jpg" alt="맥도날드의 사회적 책임" class="banner">
     <section>
       <h3 class="hide">맥딜리버리 주문하러 가기</h3>
       <a href="./mcdel.html" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
     </section>
 
-    <section class="utube">
-      <h2>맥드라이브는 어떻게 이용하나요?</h2>
-      <p>운전 중에도 24시간 간편하고 빠르게!<br>
-        차 안에서 주문하고, 차 안에서 바로 받아 맛있는 맥도날드를 즐겨보세요.</p>
 
-
-      <div id="player"></div>
-
-      <!-- 소스코드 복사로 진행시  -->
-      <!-- <iframe width="1280" height="720" src="https://www.youtube.com/embed/BiMkqfVNmnk" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe> -->
-
-      <div class="map_click"><a href="./map.html">매장 검색하러 가기</a></div>
+    <section class="social_1 social">
+      <h3>‘스케일 포 굿(Scale for Good) 캠페인’은 무엇인가요?</h3>
+      <img src="./images/스케일포굿.jpg" alt="스케일 포 굿">
+      <p class="social_text1">스케일 포 굿 캠페인은 맥도날드가 책임 있는 글로벌 기업으로<br>
+        전 세계적으로 발생하고 있는 사회, 환경적 문제해결에 기여하고자 시작한 글로벌 캠페인입니다.</p>
+      <p class="social_text2">맥도날드는 전 세계 120개 마켓에서 37,000여개 레스토랑을 운영하며 매일 6,900만명의 고객이 찾는<br>
+        책임 있는 글로벌 기업입니다. 맥도날드의 작은 변화는 전 세계에 아주 큰 변화를 만들어 낼 수 있습니다.</p>
+      <hr>
     </section>
+
+    <section class="social_2 social">
+      <h3>글로벌 맥도날드 5대 과제</h3>
+      <span class="social_part1 social_part" onclick="change_social('./images/5대과제.jpg', this)">온실가스 감축</span>
+      <span class="social_part2 social_part" onclick="change_social('./images/5대과제2.jpg', this)">지속가능한 공급</span>
+      <span class="social_part3 social_part" onclick="change_social('./images/5대과제3.jpg')">친환경 포장재 사용</span>
+      <span class="social_part4 social_part" onclick="change_social('./images/5대과제4.jpg')">가족 고객을 위한 약속</span>
+      <span class="social_part5 social_part" onclick="change_social('./images/5대과제5.jpg')">사람에 대한 투자</span>
+      <img src="./images/5대과제.jpg" alt="" class="big_img" id="big_img">
+    </section>
+
+
+
+
+
+
+
+
+
     <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
   </main>
 

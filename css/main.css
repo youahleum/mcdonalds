@@ -169,11 +169,37 @@ header {
   padding: 0 20px 0;
 }
 
+/* main 시작 */
+main {
+  overflow: hidden;
+  min-width: 1200px;
+  /* width: 1200px; */
+  margin: auto;
+  position: relative;
+}
+
+.nothing {
+  width: 100%;
+  height: 140px;
+}
+
+/* banner */
+.banner {
+  width: 1980px;
+  margin: auto;
+  left: 50%;
+  margin: 0 0 20px -990px;
+  position: relative;
+}
+
+
+
 /* 맥딜리버리 */
+
 
 .mcdel {
   position: fixed;
-  top: 675px;
+  top: 480px;
   /* right: 110px; */
   left: 50%;
   margin-left: 632px;
