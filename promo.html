@@ -8,29 +8,157 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <!-- bxslider css 파일 -->
   <link rel="stylesheet" href="css/jquery.bxslider.css">
+
   <link rel="stylesheet" href="css/main.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
   <title>맥도날드</title>
-  <style>
-    /* 메인 내용  */
-  </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
   <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
   <script type="text/javascript" src="./js/main.js"></script>
-  <script type="text/javascript">
-    function change_social(img_src, span_th) {
-      let big_img = document.getElementById("big_img");
-      let property =
+  <style>
+    /* 메인 내용  */
+    .promotion {
+      width: 1200px;
+      position: relative;
+      left: 50%;
+      margin-left: -600px;
+      display: inline-flex;
+      flex-wrap: wrap;
 
-        big_img.src = img_src;
+    }
 
-      if (count == 1) {
-        span_th.className = "select_social_part";
-        count = 0
-      } else {
+    .select_sub_menu {
+      width: 310px;
+      margin: auto;
+      /* margin: 20px 0 50px 520px; */
+      margin-bottom: 50px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
 
-      }
+    .sub_menu {
+      display: inline-flex;
+      font-size: 24px;
+      font-weight: 600;
+      /* margin-left: 40px; */
+      color: #333;
 
+    }
 
+    .ing_menu_tab,
+    .end_menu_tab {
+      margin-left: 40px;
+    }
+
+    .promo_box {
+      width: 366px;
+      height: 390px;
+      box-shadow: 5px 5px 5px #888;
+      margin: 0 30px 30px 0;
+      cursor: pointer;
+      border-radius: 10px;
+      /* background-color: #ffbc0d; */
+    }
+
+    .promo_end {
+      display: none;
+    }
+
+    .promo_end img,
+    .promo_end div {
+      opacity: 0.2;
+    }
+
+    .promo_end span {
+      position: relative;
+      bottom: 200px;
+      left: 100px;
+      font-size: 18px;
+      font-weight: 600;
+      /* z-index: 1; */
+
+    }
+
+    .promo_box img {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    .promo_txt {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 10px 0 0 30px;
+    }
+
+    .material-icons-outlined {
+      font-size: 100px;
+      color: #ffbc0d;
+      cursor: pointer;
+      display: inline-block;
+      margin: 30px 550px 20px 550px;
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript" defer>
+    // forEach문 사용
+    function plus() {
+      let endEvs = document.querySelectorAll('.promo_end')
+      endEvs.forEach(function (endEv) {
+        // console.log(1)
+        endEv.style.display = 'block';
+      })
+      document.querySelector('.material-icons-outlined').style.display = 'none';
+    }
+
+    // for문 사용
+    // const endEvs = document.getElementsByClassName("promo_end");
+
+    // function plus() {
+    //   for (i = 0; i < endEvs.length; i++) {
+    //     endEvs[i].style.display = "block";
+    //   }
+    // document.querySelector('.material-icons-outlined').style.display = 'none';
+    // }
+
+    function showAll() {
+      let allEvs = document.querySelectorAll('.promo_box')
+      let ingEvs = document.querySelectorAll('.promo_ing')
+      let endEvs = document.querySelectorAll('.promo_end')
+      allEvs.forEach(function (allEv) {
+        allEv.style.display = 'none';
+      });
+      ingEvs.forEach(function (ingEv) {
+        ingEv.style.display = 'block';
+      })
+      document.querySelector('.material-icons-outlined').style.display = 'block';
+    }
+
+    function showIng() {
+      let allEvs = document.querySelectorAll('.promo_box')
+      let ingEvs = document.querySelectorAll('.promo_ing')
+      let endEvs = document.querySelectorAll('.promo_end')
+      allEvs.forEach(function (allEv) {
+        allEv.style.display = 'none';
+      });
+      ingEvs.forEach(function (ingEv) {
+        ingEv.style.display = 'block';
+      })
+      document.querySelector('.material-icons-outlined').style.display = 'none';
+    }
+
+    function showEnd() {
+      let allEvs = document.querySelectorAll('.promo_box')
+      let ingEvs = document.querySelectorAll('.promo_ing')
+      let endEvs = document.querySelectorAll('.promo_end')
+      allEvs.forEach(function (allEv) {
+        allEv.style.display = 'none';
+      });
+      endEvs.forEach(function (endEv) {
+        endEv.style.display = 'block';
+      })
+      document.querySelector('.material-icons-outlined').style.display = 'none';
     }
   </script>
 </head>
@@ -38,7 +166,9 @@
 <body>
   <header>
     <div class="header_inner">
-      <h1 class="logo"> <a href="./index.html"> 맥도날드</a></h1>
+      <a href="./index.html">
+        <h1 class="logo"> 맥도날드</h1>
+      </a>
       <nav>
         <ul class="main_menu">
           <li class="main_menu_01">
@@ -100,357 +230,101 @@
       <a href="./mcdel.html" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
     </section>
 
-
+    <div class="select_sub_menu">
+      <div class="all_menu_tab sub_menu" onclick="showAll()">전체보기</div>
+      <div class="ing_menu_tab sub_menu" onclick="showIng()">진행중</div>
+      <div class="end_menu_tab sub_menu" onclick="showEnd()">종료</div>
+    </div>
     <section class="promotion">
       <h2 class="hide">프로모션</h2>
-      <div class="select_sub_menu">
-        <div class="mccafe_menu_tab sub_menu" onclick="cofSel()">맥카페</div>
-        <div class="drink_menu_tab sub_menu" onclick="drinSel()">음료</div>
-      </div>
-      <div class="promo_box promo_box1">
-        <div class="front">
-          <img src="./images/burger1베이컨토마토디럭스.png" alt="베이컨토마토디럭스">
-          <h3 class="promo_name">베이컨 토마토 디럭스</h3>
-          <div>Bacon Tomato Deluxe</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger1베이컨토마토디럭스.png" alt="베이컨토마토디럭스">
-          <div class="promo_name">베이컨 토마토 디럭스</div>
-          <div class="text">
-            두 장의 100% 순 쇠고기 패티에 그릴에 구워<br>
-            더욱 고소한 1장의 베이컨을 얹고,<br>
-            신선한 토마토와 양상추,<br>
-            매콤달콤한 스위트 칠리 소스, 치즈, 마요네즈를 더해<br>
-            더욱 풍부하고 신선한 맛의 프리미엄 버거.
 
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box2">
-        <div class="front">
-          <img src="./images/burger2에그불고기버거.png" alt="에그불고기버거">
-          <h3 class="promo_name">에그 불고기 버거</h3>
-          <div>Egg Bulgogi Burger</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger2에그불고기버거.png" alt="에그불고기버거">
-          <div class="promo_name">에그 불고기 버거</div>
-          <div class="text">불고기 버거에<br>
-            국내산 1+등급 계란을 더해<br>
-            맛의 정점을 찍다!
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box3">
-        <div class="front">
-          <img src="./images/burger3트리플치즈버거.png" alt="트리플치즈버거">
-          <h3 class="promo_name"> 트리플 치즈버거</h3>
-          <div>Triple Cheeseburger</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger3트리플치즈버거.png" alt="트리플치즈버거">
-          <div class="promo_name"> 트리플 치즈버거</div>
-          <div class="text">부드러운 치즈와<br>
-            풍부한 육즙의 패티를<br>
-            세배 더 진하게 즐길 수 있는<br>
-            트리플 치즈버거
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box4">
-        <div class="front">
-          <img src="./images/burger4더블불고기버거.png" alt="더블불고기버거">
-          <h3 class="promo_name">더블 불고기 버거</h3>
-          <div>Double Bulgogi Burger</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger4더블불고기버거.png" alt="더블불고기버거">
-          <div class="promo_name">더블 불고기 버거</div>
-          <div class="text">진한 불고기 소스의 패티가 두 장!<br>
-            여기에 고소한 치즈와 마요네즈,<br>
-            신선한 양상추를 곁들인 깊고 풍부한 맛.<br>
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box5">
-        <div class="front">
-          <img src="./images/burger5더블에그불고기.png" alt="더블에그불고기">
-          <h3 class="promo_name">더블 에그 불고기 버거</h3>
-          <div>Double Egg Bulgogi Burger</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger5더블에그불고기.png" alt="더블에그불고기">
-          <div class="promo_name">더블 에그 불고기 버거</div>
-          <div class="text">
-            신선한 국내산 1+등급 계란 2개가<br>
-            불고기 소스와 만나<br>
-            푸짐하고 담백한 맛의<br>
-            더블 에그 불고기 버거</div>
-        </div>
-      </div>
-      <div class="promo_box promo_box6">
-        <div class="front">
-          <img src="./images/burger6더블치즈버거.png" alt="더블치즈버거">
-          <h3 class="promo_name">더블 치즈버거</h3>
-          <div>Double Cheeseburger</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger6더블치즈버거.png" alt="더블치즈버거">
-          <div class="promo_name">더블 치즈버거</div>
-          <div class="text">고소하고 부드러운 치즈와<br>
-            100% 순 쇠고기 패티가 두개<br>
-            맥도날드만의 더블 치즈버거!!
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box7">
-        <div class="front">
-          <img src="./images/burger7더블쿼터파운더치즈.png" alt="더블쿼터파운더치즈">
-          <h3 class="promo_name">더블 쿼터파운더® 치즈</h3>
-          <div>Double Quarter Pounder® with Cheese</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger7더블쿼터파운더치즈.png" alt="더블쿼터파운더치즈">
-          <div class="promo_name">더블 쿼터파운더® 치즈</div>
-          <div class="text">좋아하는건 더 많이 즐기시라고,<br>
-            두 배 이상 커진 1/4 파운드 비프 패티가 두 장!<br>
-            육즙이 풍부한 고기 맛을 그대로 살린<br>
-            100% 순 쇠고기 패티 두 장과 치즈 두 장이<br>
-            입안 가득완벽하게 조화되는 놀라운 맛
 
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box8">
-        <div class="front">
-          <img src="./images/burger8더블필레오피쉬.png" alt="더블필레오피쉬">
-          <h3 class="promo_name">더블 필레오피쉬</h3>
-          <div>Double Filet-O-Fish</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger8더블필레오피쉬.png" alt="더블필레오피쉬">
-          <div class="promo_name">더블 필레오피쉬</div>
-          <div class="text">100% 알래스카 폴락 패티의 바삭함,<br>
-            맥도날드의 타르타르소스와 부드러운 스팀번이<br>
-            조화로운 더블 필레 오 피쉬
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box9">
-        <div class="front">
-          <img src="./images/burger9맥스파이시 상하이버거.png" alt="맥스파이시 상하이 버거">
-          <h3 class="promo_name">맥스파이시® 상하이 버거</h3>
-          <div>McSpicy® Shanghai Burger</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger9맥스파이시 상하이버거.png" alt="맥스파이시 상하이 버거">
-          <div class="promo_name">맥스파이시® 상하이 버거</div>
-          <div class="text">
-            매콤한 시즈닝을 입힌 100% 닭가슴 통살 위에<br>
-            아삭아삭한 양상추와 신선한 토마토~<br>
-            겉은 바삭, 속은 부드러운 치킨 패티의 <br>
-            매콤함으로 입맛도 기분도 화끈하게!
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box10">
-        <div class="front">
-          <img src="./images/burger10맥치킨모짜렐라.png" alt="맥치킨모짜렐라">
-          <h3 class="promo_name">맥치킨® 모짜렐라</h3>
-          <div>McChicken® Mozzarella</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger10맥치킨모짜렐라.png" alt="맥치킨모짜렐라">
-          <div class="promo_name">맥치킨® 모짜렐라</div>
-          <div class="text">
-            든든한 맥치킨에<br>
-            골든 모짜렐라 치즈 스틱 2개와<br>
-            매콤한 아라비아따 소스를 더해<br>
-            강렬하게 재탄생한 맥치킨 모짜렐라!
-          </div>
-        </div>
-      </div>
-      <div class="promo_box promo_box11">
-        <div class="front">
-          <img src="./images/burger11맥치킨.png" alt="맥치킨">
-          <div class="promo_name">맥치킨®</div>
-          <div>McChicken®</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger11맥치킨.png" alt="맥치킨">
-          <div class="promo_name">맥치킨®</div>
-          <div class="text">바삭한 치킨 패티,<br>
-            고소한 화이트 마요 소스와<br>
-            아삭한 양상추가 함께!<br>
-            더 업그레이드된 맛으로 돌아온 맥치킨
-          </div>
+
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1640223441480.png" alt="행운버거 골드 스페셜">
+        <div class="promo_txt">
+          더 특별해진 행운버거<br>
+          행운버거 골드 스페셜을 만나보세요
         </div>
       </div>
 
-      <div class="promo_box promo_box12">
-        <div class="front">
-          <img src="./images/burger12필레오피쉬.png" alt="필레오피쉬">
-          <div class="promo_name">필레 오 피쉬</div>
-          <div>Filet-O-Fish</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger12필레오피쉬.png" alt="필레오피쉬">
-          <div class="promo_name">필레 오 피쉬</div>
-          <div class="text">100% 알래스카 폴락 패티의 바삭함,<br>
-            맥도날드의 타르타르소스와<br>
-            부드러운 스팀번이 조화로운<br>
-            필레 오 피쉬
-          </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1635496530217.png" alt="딸기칠러">
+        <div class="promo_txt">
+          딸기의 상큼함을 한 잔에!<br>
+          딸기 칠러가 돌아왔다!
         </div>
       </div>
-
-      <div class="promo_box promo_box13">
-        <div class="front">
-          <img src="./images/burger13불고기버거.png" alt="불고기버거">
-          <div class="promo_name">불고기 버거</div>
-          <div>Bulgogi Burger</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger13불고기버거.png" alt="불고기버거">
-          <div class="promo_name">불고기 버거</div>
-          <div class="text">한국인의 입맛에 딱 맞는 불고기<br>
-            소스에 잘 재운 패티와<br>
-            고소한 마요네즈,<br>
-            신선한 양상추의 맛있는 조합.
-          </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1610899322892.png" alt="맥카페">
+        <div class="promo_txt">
+          0.1초에 1잔!<br>
+          매일 마시는 커피를 더 맛있게
         </div>
       </div>
-
-      <div class="promo_box promo_box14">
-        <div class="front">
-          <img src="./images/burger14_1955버거.png" alt="1955버거">
-          <div class="promo_name">1955® 버거</div>
-          <div>1955® Burger</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger14_1955버거.png" alt="1955버거">
-          <div class="promo_name">1955® 버거</div>
-          <div class="text">113g 두툼한 순 쇠고기 패티,<br>
-            특별한 1955 소스에<br>
-            깊은 풍미의 그릴드 어니언까지!<br>
-            맥도날드가 처음 생긴 1955년의 맛을 담은<br>
-            영원한 오리지널 1955 버거
-          </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1617837377223.png" alt="스트로베리 아이스크림">
+        <div class="promo_txt">
+          스트로베리 2종 아이스크림 출시!
         </div>
       </div>
-
-      <div class="promo_box promo_box15">
-        <div class="front">
-          <img src="./images/burger15빅맥.png" alt="빅맥">
-          <div class="promo_name">빅맥®</div>
-          <div>Big Mac®</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger15빅맥.png" alt="빅맥">
-          <div class="promo_name">빅맥®</div>
-          <div class="text">100% 순 쇠고기 패티 두 장에<br>
-            빅맥®만의 특별한 소스.<br>
-            입안에서 살살 녹는 치즈와<br>
-            신선한 양상추, 양파, 그리고 피클까지.<br>
-            50년 넘게 전 세계인의 입맛을<br>
-            사로 잡은 버거의 대명사.
-          </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1617186557979.png" alt="필레오피쉬">
+        <div class="promo_txt">
+          신선한 맛 가득 담아 알래스카에서 왔다!<br>
+          필레 오 피쉬 출시!
         </div>
       </div>
-
-      <div class="promo_box promo_box16">
-        <div class="front">
-          <img src="./images/burger16쿼터파운더치즈.png" alt="쿼터파운더치즈">
-          <div class="promo_name">쿼터파운더® 치즈</div>
-          <div>Quarter Pounder® with Cheese</div>
-        </div>
-        <div class="back">
-          <img src="./images/burger16쿼터파운더치즈.png" alt="쿼터파운더치즈">
-          <div class="promo_name">쿼터파운더® 치즈</div>
-          <div class="text">
-            두 배 이상 커진 두툼한 순 쇠고기 패티와<br>
-            신선한 치즈의 풍부한 맛으로<br>
-            세계적으로 사랑받고 있는<br>
-            맥도날드의 대표적인 프리미엄 버거
-          </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1631773613419.png" alt="츄로스">
+        <div class="promo_txt">
+          달콤! 바삭! 쫄깃! 츄러스 출시<br>
+          새로운 해피 스낵 가을/겨울 시즌 오픈!
         </div>
       </div>
-      <div class="promo_box promo_box17">
-        <div class="front">
-          <img src="./images/burger17슈니언버거.png" alt="슈니언버거">
-          <div class="promo_name">슈니언 버거 </div>
-          <div>Shrimp Onion Burger</div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1635831788361.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          맥도날드 앱에서 만나는 <br>
+          달콤한 바닐라 라떼 무료 쿠폰!
         </div>
-        <div class="back">
-          <img src="./images/burger17슈니언버거.png" alt="슈니언버거">
-          <div class="promo_name">슈니언 버거 </div>
-          <div class="text">탱~글한 통새우살과<br>
-            바삭한 어니언의 조화!<br>
-            슈니언 버거
-          </div>
-        </div>
+        <span>종료된 이벤트 입니다.</span>
       </div>
-      <div class="promo_box promo_box18">
-        <div class="front">
-          <img src="./images/burger18슈비버거.png" alt="슈비버거">
-          <div class="promo_name">슈비 버거</div>
-          <div>Shrimp Beef Burger</div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1634606805670.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          맥도날드 앱에서 만나는<br>
+          특별한 할로윈 혜택!
         </div>
-        <div class="back">
-          <img src="./images/burger18슈비버거.png" alt="슈비버거">
-          <div class="promo_name">슈비 버거</div>
-          <div class="text">탱~글한 통새우살에<br>
-            비프 패티를 더해 푸짐하게~<br>
-            슈비 버거
-          </div>
-        </div>
+        <span>종료된 이벤트 입니다.</span>
       </div>
-      <div class="promo_box promo_box19">
-        <div class="front">
-          <img src="./images/burger19슈슈버거.png" alt="슈슈버거">
-          <div class="promo_name">슈슈 버거</div>
-          <div>Supreme Shrimp Burger</div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1637721725751.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          매일매일 맥도날드에선 메리 크리스마스!<br>
+          트러플 리치 포테이토 머쉬룸 버거 출시!
         </div>
-        <div class="back">
-          <img src="./images/burger19슈슈버거.png" alt="슈슈버거">
-          <div class="promo_name">슈슈 버거</div>
-          <div class="text">탱~글한 통새우살 가득~<br>
-            슈슈 버거!
-          </div>
-        </div>
-
+        <span>종료된 이벤트 입니다.</span>
       </div>
-      <div class="promo_box promo_box20">
-        <div class="front">
-          <img src="./images/burger20치즈버거.png" alt="치즈버거">
-          <div class="promo_name">치즈버거</div>
-          <div>Cheeseburger</div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1626828888817.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          서머 콜라보레이션<br>
+          맥도날드XLOK 한정파 굿즈!
         </div>
-        <div class="back">
-          <img src="./images/burger20치즈버거.png" alt="치즈버거">
-          <div class="promo_name">치즈버거</div>
-          <div class="text">고소하고 부드러운 치즈와<br>
-            100% 순 쇠고기 패티,<br>
-            맥도날드만의 심플한 클래식 치즈버거.
-          </div>
-        </div>
+        <span>종료된 이벤트 입니다.</span>
       </div>
-      <div class="promo_box promo_box21">
-        <div class="front">
-          <img src="./images/burger21햄버거.png" alt="햄버거">
-          <div class="promo_name">햄버거</div>
-          <div>Hamburger</div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1622021509455.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          기간 한정 콜라보<br>
+          THE BTS 세트
         </div>
-        <div class="back">
-          <img src="./images/burger21햄버거.png" alt="햄버거">
-          <div class="promo_name">햄버거</div>
-          <div class="text">
-            100% 순 쇠고기 패티에<br>
-            상큼한 피클과 양파, <br>
-            기본에 충실한 맥도날드 햄버거.</div>
-        </div>
+        <span>종료된 이벤트 입니다.</span>
       </div>
-
+      <span class="material-icons-outlined" onclick="plus()">
+        add_circle
+      </span>
     </section>
     <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
   </main>
