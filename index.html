@@ -17,6 +17,14 @@
     }
 
     /* 배너 */
+    .index_banner {
+      width: 1800px;
+      margin: auto;
+      left: 50%;
+      margin: 0 0 20px -900px;
+      position: relative;
+    }
+
     .banner01 {
       width: 1800px;
       height: 514px;
@@ -148,6 +156,9 @@
       left: 0;
     }
 
+
+
+
     .mccafe {
       width: 578px;
       height: 613px;
@@ -168,6 +179,7 @@
       margin-left: -590px;
       /*margin-right: 50%;
       right: 600px; */
+      padding-bottom: 20px;
     }
 
     .promo h2 {
@@ -184,10 +196,20 @@
       margin: 0 auto;
     }
 
+    .promo_img img {
+      border-radius: 10px;
+    }
+
+    .promo_img img:hover {
+      box-shadow: 12px 12px 5px 1px #ffbc0d;
+    }
+
     .promo li {
       width: 380px;
       float: left;
     }
+
+
 
     .promo li:first-child,
     .promo li:nth-child(2) {
@@ -307,17 +329,158 @@
       float: left;
       margin: 0 20px 0 0;
     }
+
+    /* 팝업 */
+    .pop {
+      position: fixed;
+      top: -35%;
+      left: -30%;
+      z-index: 1000;
+      width: 100%;
+      height: 100%;
+      /* border-radius: 10%; */
+    }
+
+    .pop_box {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 430px;
+      height: 270px;
+      translate: (-50%, -50%);
+      z-index: 100;
+      background: #fff;
+      border: 3px solid #ffbc0d;
+      box-sizing: border-box;
+
+    }
+
+    .pop_cont {
+      padding: 40px;
+      font-size: 14px;
+    }
+
+    .pop_cont span {
+      color: #ffbc0d;
+      font-weight: 700;
+    }
+
+    .pop_cont h2 {
+      font-size: 20px;
+      color: #555;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .pop_btn {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      height: 50px;
+      background: #141452;
+    }
+
+    .pop_btn a {
+      position: relative;
+      display: table-cell;
+      height: 50px;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      background: #264a36;
+
+    }
+
+    .pop_btn a:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 14px;
+      right: 29px;
+      width: 1px;
+      height: 21px;
+      background: #fff;
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    .pop_btn a:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 14px;
+      right: 29px;
+      width: 1px;
+      height: 21px;
+      background: #fff;
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .pop_btn a.close_today {
+      background: #d4030a;
+    }
+
+    .pop_btn a.close_today:before,
+    .pop_btn a.close_today:after {
+      display: none;
+    }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
   <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
   <script type="text/javascript" src="./js/main.js"></script>
+  <script defer>
+    let mobileKeyWords = new Array('iPhone', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG',
+      'SonyEricsson');
+    for (var word in mobileKeyWords) {
+      if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
+        location.href = "http://dkfma6033.dothome.co.kr/mcdonalds/mobile/index.html";
+        break;
+      }
+    }
 
+    function setCookie(name, value, expiredays) {
+      let todayDate = new Date();
+      todayDate.setDate(todayDate.getDate() + expiredays);
+      document.cookie = name + "=" + value + "; path=/; expires=" + todayDate.toUTCString() + ";"
+    }
+
+    $(function () {
+      if (document.cookie.indexOf("popToday=close") < 0) {
+        document.getElementById("pop").style.display = "block";
+      } else {
+        document.getElementById("pop").style.display = "none";
+      }
+    });
+
+    function closeToday() {
+      setCookie("popToday", "close", 1);
+      $("#pop").css("display", "none");
+      document.getElementById("pop").style.display = "none";
+
+    }
+
+    function closePop() {
+
+      document.getElementById("pop").style.display = "none";
+
+    }
+  </script>
 </head>
 
 <body>
   <header>
     <div class="header_inner">
-      <h1 class="logo"> <a href="./index.html"> 맥도날드</a></h1>
+      <a href="./index.html">
+        <h1 class="logo"> 맥도날드</h1>
+      </a>
       <nav>
         <ul class="main_menu">
           <li class="main_menu_01">
@@ -346,7 +509,7 @@
             <ul>
               <li><a href="./promo.html">프로모션</a></li>
               <li><a href="./news.html">새로운소식</a></li>
-              <li><a href="./new_hpmeal">이달의 해피밀</a></li>
+              <li><a href="./new_hpmeal.html">이달의 해피밀</a></li>
             </ul>
           </li>
 
@@ -369,11 +532,23 @@
     <div class="gnb_bg"></div>
 
   </header>
-
+  <div class="pop" id="pop">
+    <div class="pop_box">
+      <div class="pop_cont">
+        <h2>저작권 관련 공지사항</h2>
+        <p>본 사이트는 상업적인 목적이 아닌<br> <span>개인 포트폴리오 용도</span>로 제작되었습니다.<br>
+          홈페이지의 내용과 이미지 등의 저작권은 출처인<br> 맥도날드에 있음을 밝힙니다.</p>
+      </div>
+      <div class="pop_btn">
+        <a id="today" href="javascript:closeToday();" class="close_today">오늘 하루 보지 않기</a>
+        <a href="javascript:closePop();">닫기</a>
+      </div>
+    </div>
+  </div>
 
   <main id="main" class="main">
     <div class="nothing"></div>
-    <section class="banner">
+    <section class="index_banner">
       <div class="banner_box">
         <h2 class="hide">새로운 소식</h2>
         <ul class="slider">

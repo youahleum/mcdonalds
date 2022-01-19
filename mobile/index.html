@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+  <!-- bxslider css 파일 -->
+  <link rel="stylesheet" href="../css/jquery.bxslider.css">
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <title>맥도날드</title>
+  <style>
+    .hide {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      /* color:inherit */
+    }
+
+    body {
+      overflow-x: hidden;
+      font-family: "나눔고딕", "Malgun Gothic", "맑은 고딕", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* header */
+    header {
+      width: 100%;
+      height: 140px;
+      position: fixed;
+      z-index: 9;
+      background-color: #fff;
+      border-bottom: 2px solid #264a36;
+
+    }
+
+    .header_inner {
+      height: 140px;
+      margin: auto;
+      position: relative;
+    }
+
+    .logo {
+      width: 170px;
+      height: 112px;
+      background: url(../images/logo1.png) no-repeat;
+      text-indent: -9999px;
+      margin: 28px 360px 0 10px;
+      float: left;
+    }
+
+    /* menu-bar */
+    .material-icons-outlined.menu {
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      font-size: 100px;
+      height: 100%;
+    }
+
+    .menu_close {
+      display: none;
+    }
+
+    .main_menu {
+      width: 70%;
+      position: absolute;
+      right: 18px;
+      top: 140px;
+      z-index: 0;
+      display: none;
+    }
+
+    .main_menu>li {
+      width: 100%;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border: 1px solid #282828;
+      background-color: #ffbc0d;
+      text-align: center;
+    }
+
+    .main_menu>li>ul {}
+
+    .main_menu>li>ul>li {
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-top: 1px solid #282828;
+      background-color: #fff;
+      width: 100%;
+      text-align: center;
+    }
+
+    .main_menu>li>ul>li>a {
+      width: 100%;
+      display: block;
+    }
+
+
+    /* main 시작 */
+    main {
+      /* overflow: hidden;
+      min-width: 1200px; */
+      /* width: 1200px; */
+      /* margin: auto; */
+      position: relative;
+      width: 100%;
+    }
+
+    .nothing {
+      width: 100%;
+      height: 140px;
+      background-color: red;
+    }
+
+    /* banner */
+    .index_banner {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      position: relative;
+    }
+
+    .index_banner img {
+      width: 366px;
+      margin: auto;
+    }
+
+    .slider li {}
+
+    /* promo */
+    .promotion {
+      width: 98%;
+      margin-left: 5%;
+      margin-bottom: 20px;
+    }
+
+    .promotion h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      position: relative;
+      left: 10%;
+      margin-bottom: 20px;
+    }
+
+    .promo_box {
+      width: 44.5%;
+      display: inline-block;
+      border: 1px solid #264a36;
+      margin: 0 2.5% 5px 0;
+      box-sizing: border-box;
+
+    }
+
+    .promo_box img {
+      width: 100%;
+    }
+
+    .promo_ing .promo_txt {
+      height: 60px;
+      text-align: center;
+      margin: 5px 0;
+      font-weight: 600;
+    }
+
+    .promo_end .promo_txt {
+      height: 40px;
+      text-align: center;
+      margin: 5px 0;
+      font-weight: 600;
+    }
+
+    .promo_end {
+      display: none;
+    }
+
+    .promo_end img,
+    .promo_end div {
+      opacity: 0.2;
+    }
+
+    .promo_end span {
+      position: relative;
+      bottom: 120px;
+      left: 20%;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+
+    /* 맥딜리버리 */
+
+    /* .mcdel {
+      position: fixed;
+      top: 480px;
+      
+      left: 50%;
+      margin-left: 632px;
+    } */
+
+    /* 위로 */
+    /* .top {
+      width: 71px;
+      height: 76px;
+      position: relative;
+      left: 50%;
+      margin-left: 650px;
+      top: -130px;
+    } */
+    .material-icons-outlined.plus {
+      display: block;
+      width: 100px;
+      font-size: 100px;
+      color: #ffbc0d;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    /* footer */
+    .footer {
+      width: 100%;
+      background: #282828;
+      color: #fff;
+      /* float: left; */
+      position: relative;
+    }
+
+    .footer h2 {
+      width: 130px;
+      height: 112px;
+      background: url(../images/logo1.png) no-repeat;
+      text-indent: -9999px;
+      position: relative;
+      top: 10px;
+      left: 5%;
+      display: inline-flex;
+    }
+
+    .footer_box ul {
+      margin-left: 10%;
+    }
+
+    .footer_cont1 {
+      display: inline-table;
+      line-height: 1.6;
+      position: relative;
+      top: 10px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <!-- bxslider js 파일 -->
+  <script src="../js/jquery.bxslider.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      //slide
+      var slider = $('.slider').bxSlider({
+        auto: true, //이미지 회전이 자동으로 시작
+        speed: 500, //다음 이미지로 바뀌는데 걸리는 시간
+        pause: 2000, //다음 이미지로 바뀌는데 걸리는 시간
+        mode: 'horizontal', //수평 스크롤
+        autoControls: false, // 시작, 정지버튼 노출 여부 
+        controls: false, // prev/next 버튼 노출 여부
+        pager: true
+        // nextSelector: '#slider-next',
+        // prevSelector: '#slider-prev',
+      });
+      //이전 버튼을 클릭하면 이전 슬라이드로 전환
+      // $('#slider-prev').on('click', function () {
+      //   slider.goToPrevSlide(); //이전 슬라이드 배너로 이동
+      //   return false; //<a>에 링크 차단
+      // });
+
+      // //다음 버튼을 클릭하면 다음 슬라이드로 전환
+      // $('#slider-next').on('click', function () {
+      //   slider.goToNextSlide(); //다음 슬라이드 배너로 이동
+      //   return false;
+      // });
+
+    });
+
+    function plus() {
+      let endEvs = document.querySelectorAll('.promo_end')
+      endEvs.forEach(function (endEv) {
+        // console.log(1)
+        endEv.style.display = 'inline-block';
+      })
+      document.querySelector('.material-icons-outlined.plus').style.display = 'none';
+    }
+
+    function menu_open() {
+      let gnb = document.querySelector('.main_menu')
+      gnb.style.display = "block";
+      document.querySelector('.menu_open').style.display = 'none';
+      document.querySelector('.menu_close').style.display = 'block';
+    }
+
+    function menu_close() {
+      let gnb = document.querySelector('.main_menu')
+      gnb.style.display = "none";
+      document.querySelector('.menu_open').style.display = 'block';
+      document.querySelector('.menu_close').style.display = 'none';
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <a href="./index.html">
+        <h1 class="logo"> 맥도날드</h1>
+      </a>
+      <nav>
+        <a href="#">
+          <span class="material-icons-outlined menu_open menu" onclick="menu_open()">
+            menu
+          </span>
+        </a>
+        <a href="#">
+          <span class="material-icons-outlined menu_close menu" onclick="menu_close()">
+            close
+          </span>
+        </a>
+        <ul class="main_menu">
+          <li class="main_menu_01">MENU
+            <a href=""></a>
+            <ul>
+              <li><a href="./burger.html">버거</a> </li>
+              <li><a href="./mclunch.html">맥런치</a> </li>
+              <li><a href="./mcmorning.html">맥모닝</a></li>
+              <li><a href="./happysnack.html">해피스낵</a></li>
+              <li><a href="./side_dst.html">사이드 & 디저트</a></li>
+              <li><a href="./mccafe.html">맥카페 & 음료</a></li>
+              <li><a href="./happymeal.html">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">STORE
+            <a href=""></a>
+            <ul>
+              <li><a href="./map.html">매장찾기</a></li>
+              <li><a href="./mcdel.html">맥딜리버리</a></li>
+              <li><a href="./mcdrive.html">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">WHAT'S NEW
+            <a href=""></a>
+            <ul>
+              <li><a href="./promo.html">프로모션</a></li>
+              <li><a href="./news.html">새로운소식</a></li>
+              <li><a href="./new_hpmeal.html">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">STORY
+            <a href=""></a>
+            <ul>
+              <li><a href="./brand.html">브랜드 소개</a></li>
+              <li><a href="./social.html">사회적 책임과 지원</a></li>
+              <li><a href="./competi.html">맥도날드 경쟁력</a></li>
+              <li><a href="./human.html">맥도날드 사람들</a></li>
+            </ul>
+          </li>
+          <!-- <li class="main_menu_05">MEMBERS
+            <a href=""></a>
+            <ul>
+              <li><a href="./login.html">로그인</a></li>
+              <li><a href="./join.html">회원가입</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </nav>
+
+    </div>
+    <div class="gnb_bg"></div>
+
+  </header>
+  <main id="main" class="main">
+    <div class="nothing"></div>
+    <section class="index_banner">
+      <div class="banner_box">
+        <h2 class="hide">새로운 소식</h2>
+        <ul class="slider">
+          <li class="banner01">
+            <a href="">
+              <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1640223441480.png" alt="행운버거 골드 스페셜">
+            </a>
+          </li>
+          <li class="banner02">
+            <a href="">
+              <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1635496530217.png" alt="딸기 칠러">
+            </a>
+          </li>
+          <li class="banner03">
+            <a href="">
+              <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1610899322892.png" alt="매일 마시는 커피를 더 맛있게">
+            </a>
+          </li>
+
+        </ul>
+        <!-- 
+        <div class="banner_before" id="slider-next">앞으로</div>
+
+        <div class="banner_after" id="slider-prev">뒤로</div> -->
+      </div>
+    </section>
+
+
+    <section class="promotion">
+
+      <h2 class="promo_name">MCDONALDS NEWS</h2>
+
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1640223441480.png" alt="행운버거 골드 스페셜">
+        <div class="promo_txt">
+          더 특별해진 행운버거<br>
+          행운버거 골드 스페셜을<br> 만나보세요
+        </div>
+      </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1635496530217.png" alt="딸기칠러">
+        <div class="promo_txt">
+          딸기의 상큼함을 한 잔에!<br>
+          딸기 칠러가 돌아왔다!
+        </div>
+      </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1610899322892.png" alt="맥카페">
+        <div class="promo_txt">
+          0.1초에 1잔!<br>
+          매일 마시는 커피를<br> 더 맛있게
+        </div>
+      </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1617837377223.png" alt="스트로베리 아이스크림">
+        <div class="promo_txt">
+          스트로베리 2종<br> 아이스크림 출시!
+        </div>
+      </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1617186557979.png" alt="필레오피쉬">
+        <div class="promo_txt">
+          신선한 맛 가득 담아<br> 알래스카에서 왔다!<br>
+          필레 오 피쉬 출시!
+        </div>
+      </div>
+      <div class="promo_box promo_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1631773613419.png" alt="츄로스">
+        <div class="promo_txt">
+          달콤! 바삭! 쫄깃!<br> 츄러스 출시<br>
+        </div>
+      </div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1635831788361.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          맥도날드 앱에서 만나는 <br>
+          달콤한 바닐라 라떼<br> 무료 쿠폰!
+        </div>
+        <span>종료된<br> 이벤트 입니다.</span>
+      </div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1634606805670.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          <br>
+          맥도날드 앱에서 만나는<br>
+          특별한 할로윈 혜택!
+        </div>
+        <span>종료된<br> 이벤트 입니다.</span>
+      </div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1637721725751.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          매일매일 맥도날드에선<br> 메리 크리스마스!<br>
+          트러플 리치 포테이토<br> 머쉬룸 버거 출시!
+        </div>
+        <span>종료된<br> 이벤트 입니다.</span>
+      </div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1626828888817.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          <br>
+          서머 콜라보레이션<br>
+          맥도날드XLOK 한정파 굿즈!
+        </div>
+        <span>종료된<br> 이벤트 입니다.</span>
+      </div>
+      <div class="promo_box promo_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/promotion/1622021509455.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          <br>
+          기간 한정 콜라보<br>
+          THE BTS 세트
+        </div>
+        <span>종료된<br> 이벤트 입니다.</span>
+      </div>
+
+    </section>
+    <a href="#">
+      <span class="material-icons-outlined plus" onclick="plus()">
+        add_circle
+      </span>
+    </a>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <hr>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+
+    </div>
+  </footer>
+
+</body>

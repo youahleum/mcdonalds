@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <!-- bxslider css 파일 -->
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+  <title>맥도날드</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
+  <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
+  <script type="text/javascript" src="./js/main.js"></script>
+  <style>
+    /* 메인 내용  */
+    .promotion {
+      width: 1200px;
+      position: relative;
+      left: 50%;
+      margin-left: -600px;
+      display: inline-flex;
+      flex-wrap: wrap;
+
+    }
+
+    .select_sub_menu {
+      width: 310px;
+      margin: auto;
+      /* margin: 20px 0 50px 520px; */
+      margin-bottom: 50px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .sub_menu {
+      display: inline-flex;
+      font-size: 24px;
+      font-weight: 600;
+      /* margin-left: 40px; */
+      color: #333;
+
+    }
+
+    .ing_menu_tab,
+    .end_menu_tab {
+      margin-left: 40px;
+    }
+
+    .hpmeal_box {
+      width: 366px;
+      height: 390px;
+      box-shadow: 5px 5px 5px #888;
+      margin: 0 30px 30px 0;
+      cursor: pointer;
+      border-radius: 10px;
+      /* background-color: #ffbc0d; */
+    }
+
+    .hpmeal_end {
+      display: none;
+    }
+
+    .hpmeal_end img,
+    .hpmeal_end div {
+      opacity: 0.2;
+    }
+
+    .hpmeal_end span {
+      position: relative;
+      bottom: 200px;
+      left: 100px;
+      font-size: 18px;
+      font-weight: 600;
+      /* z-index: 1; */
+
+    }
+
+    .hpmeal_box img {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+    }
+
+    .promo_txt {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 10px 0 0 30px;
+    }
+
+    .material-icons-outlined {
+      font-size: 100px;
+      color: #ffbc0d;
+      cursor: pointer;
+      display: inline-block;
+      margin: 30px 550px 20px 550px;
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript" defer>
+    // forEach문 사용
+    // function plus() {
+    //   let endEvs = document.querySelectorAll('.hpmeal_end')
+    //   endEvs.forEach(function (endEv) {
+    //     // console.log(1)
+    //     endEv.style.display = 'block';
+    //   })
+    //   document.querySelector('.material-icons-outlined').style.display = 'none';
+    // }
+
+    // for문 사용
+    const endEvs = document.getElementsByClassName("hpmeal_end");
+    let a = 0
+
+    function plus() {
+
+      let allEvs = document.getElementsByClassName('hpmeal_box');
+      for (i = a; i < (6 + a); i++) {
+        allEvs[i].style.display = 'block';
+
+        if ((i + 1) == endEvs.length) {
+          document.querySelector('.material-icons-outlined').style.display = 'none';
+        }
+      }
+      a = i + 1
+    }
+
+    function showAll() {
+      let allEvs = document.querySelectorAll('.hpmeal_box')
+      let ingEvs = document.querySelectorAll('.hpmeal_ing')
+      let endEvs = document.querySelectorAll('.hpmeal_end')
+      allEvs.forEach(function (allEv) {
+        allEv.style.display = 'none';
+      });
+      ingEvs.forEach(function (ingEv) {
+        ingEv.style.display = 'block';
+      })
+      document.querySelector('.material-icons-outlined').style.display = 'block';
+      a = 0
+    }
+
+    function showIng() {
+      let allEvs = document.querySelectorAll('.hpmeal_box')
+      let ingEvs = document.querySelectorAll('.hpmeal_ing')
+      let endEvs = document.querySelectorAll('.hpmeal_end')
+      allEvs.forEach(function (allEv) {
+        allEv.style.display = 'none';
+      });
+      ingEvs.forEach(function (ingEv) {
+        ingEv.style.display = 'block';
+      })
+      document.querySelector('.material-icons-outlined').style.display = 'none';
+    }
+
+    function showEnd() {
+      let allEvs = document.querySelectorAll('.hpmeal_box')
+      let ingEvs = document.querySelectorAll('.hpmeal_ing')
+      let endEvs = document.querySelectorAll('.hpmeal_end')
+      allEvs.forEach(function (allEv) {
+        allEv.style.display = 'none';
+      });
+      endEvs.forEach(function (endEv) {
+        endEv.style.display = 'block';
+      })
+      document.querySelector('.material-icons-outlined').style.display = 'none';
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="header_inner">
+      <a href="./index.html">
+        <h1 class="logo"> 맥도날드</h1>
+      </a>
+      <nav>
+        <ul class="main_menu">
+          <li class="main_menu_01">
+            <a href="./burger.html">MENU</a>
+            <ul>
+              <li><a href="./burger.html">버거</a> </li>
+              <li><a href="./mclunch.html">맥런치</a> </li>
+              <li><a href="./mcmorning.html">맥모닝</a></li>
+              <li><a href="./happysnack.html">해피스낵</a></li>
+              <li><a href="./side_dst.html">사이드 & 디저트</a></li>
+              <li><a href="./mccafe.html">맥카페 & 음료</a></li>
+              <li><a href="./happymeal.html">해피밀</a></li>
+            </ul>
+          </li>
+          <li class="main_menu_02">
+            <a href="./map.html">STORE</a>
+            <ul>
+              <li><a href="./map.html">매장찾기</a></li>
+              <li><a href="./mcdel.html">맥딜리버리</a></li>
+              <li><a href="./mcdrive.html">맥드라이브</a></li>
+            </ul>
+
+          </li>
+          <li class="main_menu_03">
+            <a href="./promo.html">WHAT'S NEW</a>
+            <ul>
+              <li><a href="./promo.html">프로모션</a></li>
+              <li><a href="./news.html">새로운소식</a></li>
+              <li><a href="./new_hpmeal.html">이달의 해피밀</a></li>
+            </ul>
+          </li>
+
+          <li class="main_menu_04">
+            <a href="./brand.html">STORY</a>
+            <ul>
+              <li><a href="./brand.html">브랜드 소개</a></li>
+              <li><a href="./social.html">사회적 책임과 지원</a></li>
+              <li><a href="./competi.html">맥도날드 경쟁력</a></li>
+              <li><a href="./human.html">맥도날드 사람들</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <ul class="side_menu">
+        <li><a href="./login.html">로그인</a></li>
+        <li><a href="./join.html">회원가입</a></li>
+      </ul>
+    </div>
+    <div class="gnb_bg"></div>
+
+  </header>
+
+
+  <main id="main" class="main">
+    <div class="nothing"></div>
+    <img src="./images/이달의해피밀배너.jpg" alt="맥도날드 이달의 해피밀" class="banner">
+    <section>
+      <h3 class="hide">맥딜리버리 주문하러 가기</h3>
+      <a href="./mcdel.html" class="mcdel"><img src="./images/mcdel.jpg" alt="맥딜리버리"></a>
+    </section>
+
+    <div class="select_sub_menu">
+      <div class="all_menu_tab sub_menu" onclick="showAll()">전체보기</div>
+      <div class="ing_menu_tab sub_menu" onclick="showIng()">진행중</div>
+      <div class="end_menu_tab sub_menu" onclick="showEnd()">종료</div>
+    </div>
+    <section class="promotion">
+      <h2 class="hide">프로모션</h2>
+
+
+
+      <div class="hpmeal_box hpmeal_ing">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1640147507304.png" alt="씽2게더">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          씽2를 만나보세요
+        </div>
+      </div>
+
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1637139929916.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          빌딩브록스를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1634538163248.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          토마스와 친구들&마이멜로디와<br>
+          리틀트윈스타를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1631678982207.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          톰과 제리를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1627978618106.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          도라에몽를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1624940313930.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          스페이스 잼:새로운시대를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1621563053582.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          DC Super Heroes를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1618807390980.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          Mr.Meen&Little Miss를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1615269275523.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          해즈브로 게임를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1611824280176.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          스폰지밥 네모바지를 만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <div class="hpmeal_box hpmeal_end">
+        <img src="https://www.mcdonalds.co.kr/upload/bbs/happy/1607414860700.png" alt="종료된 이벤트">
+        <div class="promo_txt">
+          이달의 해피밀!<br>
+          마이 리틀 포니와 트랜스포머를<br>
+          만나보세요
+        </div>
+        <span>종료된 이벤트 입니다.</span>
+      </div>
+      <span class="material-icons-outlined" onclick="plus()">
+        add_circle
+      </span>
+    </section>
+    <div class="top"><a href=""><img src="./images/top.jpg" alt="위로 올라가기"></a></div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="footer_box">
+      <h2>사이트 이용안내</h2>
+      <ul class="footer_cont1">
+        <li>한국맥도날드(유)</li>
+        <li>대표이사 : 앤토니 마티네즈</li>
+        <li>사업자등록번호 : 123-45-67890</li>
+        <li>전화주문 : 1600-5252</li>
+      </ul>
+      <ul class="footer_cont2">
+        <li>개인정보 처리방침</li>
+        <li>위치정보 이용약관</li>
+        <li>사이트맵</li>
+        <li>임차문의</li>
+        <li>고객문의</li>
+        <li>인재채용</li>
+      </ul>
+      <a href=""><img src="./images/웹접근성.jpg" alt="웹접근성"></a>
+    </div>
+  </footer>
+
+</body>
+
+
+</html>

@@ -10,9 +10,9 @@
   <title>로그인 - 맥도날드</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
   <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
-  <script type="text/javascript" src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
 
-  <style type="text/css">
+  <style>
     /* LOGIN */
     .nothing {
       width: 100%;
@@ -92,12 +92,35 @@
       font-size: 15px;
     }
   </style>
+  <script>
+    function login_check() {
+      let u_id = document.getElementById("u_id")
+      let pwd = document.getElementById("pwd")
+
+
+      if (u_id.value == "") {
+        var err_txt = document.querySelector(".err_id")
+        err_txt.innerHTML = "아이디를 입력하세요";
+        u_id.focus();
+        return false;
+      };
+      if (pwd.value == "") {
+        var err_txt = document.querySelector(".err_pwd");
+        err_txt.innerHTML = "비밀번호를 입력하세요";
+        pwd.focus();
+        return false;
+      };
+
+    }
+  </script>
 </head>
 
 <body>
   <header>
     <div class="header_inner">
-      <h1 class="logo"> <a href="./index.html"> 맥도날드</a></h1>
+      <a href="./index.html">
+        <h1 class="logo"> 맥도날드</h1>
+      </a>
       <nav>
         <ul class="main_menu">
           <li class="main_menu_01">
@@ -126,7 +149,7 @@
             <ul>
               <li><a href="./promo.html">프로모션</a></li>
               <li><a href="./news.html">새로운소식</a></li>
-              <li><a href="./new_hpmeal">이달의 해피밀</a></li>
+              <li><a href="./new_hpmeal.html">이달의 해피밀</a></li>
             </ul>
           </li>
 
@@ -158,10 +181,11 @@
 
     <div class="login_box">
       <h2>LOGIN</h2>
-      <form action="">
-        <input type="text" placeholder="아이디를 입력해주세요">
-        <input type="password" placeholder="비밀번호를 입력해주세요">
-        <input type="submit" value="로그인">
+      <form action="login_ok.php" method="post" name="login_form" onsubmit="return login_check()">
+        <input type="text" name="u_id" class="u_id" id="u_id" placeholder="아이디를 입력해주세요"><br>
+        <span class="err_id"></span>
+        <input type="password" name="pwd" class="pwd" id="pwd" placeholder="비밀번호를 입력해주세요"><br>
+        <span class="err_pwd"></span>
       </form>
       <div>
         <a href="">회원가입</a>

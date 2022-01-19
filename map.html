@@ -15,33 +15,26 @@
     .map_box {
       width: 1200px;
       margin: auto;
+      background-color: seagreen;
     }
 
-    .map {
+    #map {
       width: 1200px;
-      height: 900px;
+      height: 500px;
     }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- 제이쿼리 파일-->
   <script src="js/jquery.bxslider.js"></script> <!-- bxslider js 파일 -->
   <script type="text/javascript" src="./js/main.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a3d9965c490c7a2f5f1bcdca546774a">
-  </script>
-  <script type="text/javascript" defer>
-    let container = document.getElementById('map');
-    let options = {
-      center: new kakao.maps.LatLng(37.57079, 126.9813713),
-      level: 3
-    };
 
-    let map = new kakao.maps.Map(container, options);
-  </script>
 </head>
 
 <body>
   <header>
     <div class="header_inner">
-      <h1 class="logo"><a href="./index.html"> 맥도날드</a></h1>
+      <a href="./index.html">
+        <h1 class="logo"> 맥도날드</h1>
+      </a>
       <nav>
         <ul class="main_menu">
           <li class="main_menu_01">
@@ -70,7 +63,7 @@
             <ul>
               <li><a href="./promo.html">프로모션</a></li>
               <li><a href="./news.html">새로운소식</a></li>
-              <li><a href="./new_hpmeal">이달의 해피밀</a></li>
+              <li><a href="./new_hpmeal.html">이달의 해피밀</a></li>
             </ul>
           </li>
 
@@ -106,6 +99,17 @@
     <section class="map_box">
       <div id="map"></div>
     </section>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=217fc5a1610610eaf4a917e346ef62b9">
+    </script>
+    <script type="text/javascript">
+      let container = document.getElementById('map');
+      let options = {
+        center: new kakao.maps.LatLng(37.57079, 126.9813713),
+        level: 3
+      };
+
+      let map = new kakao.maps.Map(container, options);
+    </script>
 
 
 
